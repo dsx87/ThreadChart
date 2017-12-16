@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2C6EAD1FE52D680032E8B2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C6EAC1FE52D680032E8B2 /* Menu.swift */; };
+		1D2C6EAF1FE52F730032E8B2 /* tempVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C6EAE1FE52F730032E8B2 /* tempVCViewController.swift */; };
+		1D93AE1F1FDB288C00953F67 /* ThreadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D93AE1E1FDB288C00953F67 /* ThreadTableViewCell.swift */; };
+		1DA0827D1FD1AE63004333FD /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0827C1FD1AE63004333FD /* Thread.swift */; };
 		1DC7F9571FCCB78400E4237C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F9561FCCB78400E4237C /* AppDelegate.swift */; };
-		1DC7F9591FCCB78400E4237C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F9581FCCB78400E4237C /* ViewController.swift */; };
+		1DC7F9591FCCB78400E4237C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F9581FCCB78400E4237C /* MainViewController.swift */; };
 		1DC7F95C1FCCB78400E4237C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7F95A1FCCB78400E4237C /* Main.storyboard */; };
 		1DC7F95E1FCCB78400E4237C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7F95D1FCCB78400E4237C /* Assets.xcassets */; };
 		1DC7F9611FCCB78400E4237C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7F95F1FCCB78400E4237C /* LaunchScreen.storyboard */; };
+		1DC7F9691FCDE52900E4237C /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F9681FCDE52900E4237C /* ThreadViewController.swift */; };
+		1DC7F96B1FCDEB1300E4237C /* MainViewControllerDelegateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F96A1FCDEB1300E4237C /* MainViewControllerDelegateMethods.swift */; };
+		1DF9C49B1FDC454B00201F09 /* Thread_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9C49A1FDC454B00201F09 /* Thread_types.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D2C6EAC1FE52D680032E8B2 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		1D2C6EAE1FE52F730032E8B2 /* tempVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempVCViewController.swift; sourceTree = "<group>"; };
+		1D93AE1E1FDB288C00953F67 /* ThreadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadTableViewCell.swift; sourceTree = "<group>"; };
+		1DA0827C1FD1AE63004333FD /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		1DC7F9531FCCB78400E4237C /* ThreadChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC7F9561FCCB78400E4237C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1DC7F9581FCCB78400E4237C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DC7F9581FCCB78400E4237C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1DC7F95B1FCCB78400E4237C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DC7F95D1FCCB78400E4237C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC7F9601FCCB78400E4237C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DC7F9621FCCB78400E4237C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DC7F9681FCDE52900E4237C /* ThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
+		1DC7F96A1FCDEB1300E4237C /* MainViewControllerDelegateMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerDelegateMethods.swift; sourceTree = "<group>"; };
+		1DF9C49A1FDC454B00201F09 /* Thread_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread_types.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				1DC7F9561FCCB78400E4237C /* AppDelegate.swift */,
-				1DC7F9581FCCB78400E4237C /* ViewController.swift */,
+				1DC7F9581FCCB78400E4237C /* MainViewController.swift */,
+				1DC7F9681FCDE52900E4237C /* ThreadViewController.swift */,
+				1D93AE1E1FDB288C00953F67 /* ThreadTableViewCell.swift */,
 				1DC7F95A1FCCB78400E4237C /* Main.storyboard */,
 				1DC7F95D1FCCB78400E4237C /* Assets.xcassets */,
 				1DC7F95F1FCCB78400E4237C /* LaunchScreen.storyboard */,
 				1DC7F9621FCCB78400E4237C /* Info.plist */,
+				1DC7F96A1FCDEB1300E4237C /* MainViewControllerDelegateMethods.swift */,
+				1DA0827C1FD1AE63004333FD /* Thread.swift */,
+				1DF9C49A1FDC454B00201F09 /* Thread_types.swift */,
+				1D2C6EAC1FE52D680032E8B2 /* Menu.swift */,
+				1D2C6EAE1FE52F730032E8B2 /* tempVCViewController.swift */,
 			);
 			path = ThreadChart;
 			sourceTree = "<group>";
@@ -136,8 +157,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC7F9591FCCB78400E4237C /* ViewController.swift in Sources */,
+				1DC7F9591FCCB78400E4237C /* MainViewController.swift in Sources */,
+				1DA0827D1FD1AE63004333FD /* Thread.swift in Sources */,
+				1D2C6EAD1FE52D680032E8B2 /* Menu.swift in Sources */,
+				1DC7F96B1FCDEB1300E4237C /* MainViewControllerDelegateMethods.swift in Sources */,
+				1D2C6EAF1FE52F730032E8B2 /* tempVCViewController.swift in Sources */,
+				1DF9C49B1FDC454B00201F09 /* Thread_types.swift in Sources */,
 				1DC7F9571FCCB78400E4237C /* AppDelegate.swift in Sources */,
+				1DC7F9691FCDE52900E4237C /* ThreadViewController.swift in Sources */,
+				1D93AE1F1FDB288C00953F67 /* ThreadTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FCLYBXX3KC;
 				INFOPLIST_FILE = ThreadChart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZOG.ThreadChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FCLYBXX3KC;
 				INFOPLIST_FILE = ThreadChart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZOG.ThreadChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
