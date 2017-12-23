@@ -12,6 +12,13 @@ let cubeRoot:(Double) -> Double = {x in Double(pow(x, 1/3))}
 
 struct Thread {
     static let threadTypes = ["Metric Threads (ISO)","United Threads (UN)"]
+    static let isoNutTolerances = ["E","F","G","H"]
+    static let isoBoltTolreances = ["d","e","f","g","h"]
+    
+    static let unNutTolerances = ["1B","2B","3B"]
+    static let unBoltTolerances = ["1A","2A","3A"]
+    
+    
     
     let tapHole:Double?
     let threadPitch:Double

@@ -9,6 +9,7 @@
 import Foundation
 
 extension Thread {
+    
     //MARK: Types
     enum ThreadResultsName {
         case maxMajor, minMajor
@@ -33,19 +34,21 @@ extension Thread {
     }
     struct Tolerances {
         struct ISO {
-            enum Bolt {
+            enum Bolt:Int {
                 case d, e, f, g, h
             }
-            enum Nut {
+            
+            enum Nut:Int {
                 case E, F, G, H
             }
+            
         }
         
         struct UN {
-            enum Bolt {
+            enum Bolt:Int {
                 case oneA, twoA, threeA
             }
-            enum Nut {
+            enum Nut:Int {
                 case oneB, twoB, threeB
             }
         }
