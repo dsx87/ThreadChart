@@ -13,10 +13,15 @@
 		1D5237FE1FE999B500B284A9 /* InExViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5237FD1FE999B500B284A9 /* InExViewController.swift */; };
 		1D5238001FE99A7300B284A9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5237FF1FE99A7300B284A9 /* ResultsViewController.swift */; };
 		1D5238021FE99A8900B284A9 /* ParametesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5238011FE99A8900B284A9 /* ParametesViewController.swift */; };
+		1D7603F01FF6B7BA008B914D /* NewInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */; };
 		1DA0827D1FD1AE63004333FD /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0827C1FD1AE63004333FD /* Thread.swift */; };
 		1DC7F9571FCCB78400E4237C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F9561FCCB78400E4237C /* AppDelegate.swift */; };
 		1DC7F95E1FCCB78400E4237C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7F95D1FCCB78400E4237C /* Assets.xcassets */; };
+		1DF5CA171FF6EBD100A5E5A4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5CA161FF6EBD100A5E5A4 /* SWRevealViewController.m */; };
+		1DF5CA1B1FF6F0E100A5E5A4 /* UNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */; };
 		1DF9C49B1FDC454B00201F09 /* Thread_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9C49A1FDC454B00201F09 /* Thread_types.swift */; };
+		1DFD336E1FFACD9000A062BA /* ThreadChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD336D1FFACD9000A062BA /* ThreadChartViewController.swift */; };
+		1DFD33721FFAD0A900A062BA /* ISOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD33711FFAD0A900A062BA /* ISOViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +31,19 @@
 		1D5237FD1FE999B500B284A9 /* InExViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InExViewController.swift; sourceTree = "<group>"; };
 		1D5237FF1FE99A7300B284A9 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		1D5238011FE99A8900B284A9 /* ParametesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametesViewController.swift; sourceTree = "<group>"; };
+		1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewInterface.storyboard; sourceTree = "<group>"; };
 		1DA0827C1FD1AE63004333FD /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		1DC7F9531FCCB78400E4237C /* ThreadChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC7F9561FCCB78400E4237C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC7F95D1FCCB78400E4237C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC7F9621FCCB78400E4237C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF5CA141FF6EBD000A5E5A4 /* ThreadChart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThreadChart-Bridging-Header.h"; sourceTree = "<group>"; };
+		1DF5CA151FF6EBD000A5E5A4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1DF5CA161FF6EBD100A5E5A4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNViewController.swift; sourceTree = "<group>"; };
 		1DF9C49A1FDC454B00201F09 /* Thread_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread_types.swift; sourceTree = "<group>"; };
+		1DFD336D1FFACD9000A062BA /* ThreadChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadChartViewController.swift; sourceTree = "<group>"; };
+		1DFD33711FFAD0A900A062BA /* ISOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +106,44 @@
 		1DC7F9551FCCB78400E4237C /* ThreadChart */ = {
 			isa = PBXGroup;
 			children = (
+				1DF5CA131FF6EBB400A5E5A4 /* RevealViewController */,
 				1DC7F9561FCCB78400E4237C /* AppDelegate.swift */,
 				1D5238041FE99FF300B284A9 /* ThreadCalulation */,
-				1D5238031FE99FE500B284A9 /* ViewControllers */,
-				1D5237F91FE995C900B284A9 /* Main.storyboard */,
+				1DF5CA1D1FF6F10200A5E5A4 /* ViewControllers */,
+				1DF5CA1C1FF6F0F400A5E5A4 /* OldDesign */,
 				1D5238061FE9A02400B284A9 /* Support */,
+				1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */,
 			);
 			path = ThreadChart;
+			sourceTree = "<group>";
+		};
+		1DF5CA131FF6EBB400A5E5A4 /* RevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5CA151FF6EBD000A5E5A4 /* SWRevealViewController.h */,
+				1DF5CA161FF6EBD100A5E5A4 /* SWRevealViewController.m */,
+				1DF5CA141FF6EBD000A5E5A4 /* ThreadChart-Bridging-Header.h */,
+			);
+			name = RevealViewController;
+			sourceTree = "<group>";
+		};
+		1DF5CA1C1FF6F0F400A5E5A4 /* OldDesign */ = {
+			isa = PBXGroup;
+			children = (
+				1D5238031FE99FE500B284A9 /* ViewControllers */,
+				1D5237F91FE995C900B284A9 /* Main.storyboard */,
+			);
+			name = OldDesign;
+			sourceTree = "<group>";
+		};
+		1DF5CA1D1FF6F10200A5E5A4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */,
+				1DFD336D1FFACD9000A062BA /* ThreadChartViewController.swift */,
+				1DFD33711FFAD0A900A062BA /* ISOViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +178,7 @@
 				TargetAttributes = {
 					1DC7F9521FCCB78400E4237C = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -163,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DC7F95E1FCCB78400E4237C /* Assets.xcassets in Resources */,
+				1D7603F01FF6B7BA008B914D /* NewInterface.storyboard in Resources */,
 				1D5237F81FE9954A00B284A9 /* LaunchScreen.storyboard in Resources */,
 				1D5237FA1FE995C900B284A9 /* Main.storyboard in Resources */,
 			);
@@ -178,9 +223,13 @@
 				1DA0827D1FD1AE63004333FD /* Thread.swift in Sources */,
 				1D5237FC1FE9994E00B284A9 /* StandardViewController.swift in Sources */,
 				1DF9C49B1FDC454B00201F09 /* Thread_types.swift in Sources */,
+				1DFD33721FFAD0A900A062BA /* ISOViewController.swift in Sources */,
+				1DFD336E1FFACD9000A062BA /* ThreadChartViewController.swift in Sources */,
+				1DF5CA171FF6EBD100A5E5A4 /* SWRevealViewController.m in Sources */,
 				1D5238001FE99A7300B284A9 /* ResultsViewController.swift in Sources */,
 				1DC7F9571FCCB78400E4237C /* AppDelegate.swift in Sources */,
 				1D5238021FE99A8900B284A9 /* ParametesViewController.swift in Sources */,
+				1DF5CA1B1FF6F0E100A5E5A4 /* UNViewController.swift in Sources */,
 				1D5237FE1FE999B500B284A9 /* InExViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FCLYBXX3KC;
 				INFOPLIST_FILE = ThreadChart/Info.plist;
@@ -306,6 +356,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZOG.ThreadChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThreadChart/ThreadChart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -315,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FCLYBXX3KC;
 				INFOPLIST_FILE = ThreadChart/Info.plist;
@@ -322,6 +375,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZOG.ThreadChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThreadChart/ThreadChart-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

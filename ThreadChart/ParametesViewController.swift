@@ -57,14 +57,31 @@ class ParametersViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     // MARK:Actions
     @IBAction func calculate(_ sender: UIButton) {
+        let nf = NumberFormatter()
+        nf.locale = Locale(identifier: Locale.current.identifier)
+        nf.numberStyle = .decimal
+        nf.decimalSeparator = ","
+        
         if diameterTextField.text == nil || diameterTextField.text == "" ||
             pitchTextField.text == nil   || pitchTextField.text == "" {
     
             showAlert(text: "Diameter and/or pitch field is empty")
             return
         }
-        appDelegate.threadParams[.diameter] = Float(diameterTextField.text!)
-        appDelegate.threadParams[.pitch] = Float(pitchTextField.text!)
+        
+        
+        guard let diam = nf.number(from: diameterTextField.text!) else {
+            print("problem with diameter value")
+            return
+        }
+        guard let pitch = nf.number(from: pitchTextField.text!) else {
+            print("priblem with pitch value")
+            return
+        }
+        
+
+        appDelegate.threadParams[.diameter] = diam
+        appDelegate.threadParams[.pitch] = pitch
         
         performSegue(withIdentifier: "resultsSegue", sender: nil)
     }
