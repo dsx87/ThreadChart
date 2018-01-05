@@ -44,6 +44,8 @@ class ThreadChartViewController: UIViewController {
     //MARK: Reveal VC methods
     func revealViewControllerHandler(){
         if revealViewController() != nil{
+            revealViewController().rearViewRevealWidth = 200
+            revealViewController().rearViewRevealOverdraw = 0
             menuButton.addTarget(revealViewController(),
                                  action: #selector(SWRevealViewController.revealToggle(_:)),
                                  for: .touchUpInside)
@@ -55,7 +57,7 @@ class ThreadChartViewController: UIViewController {
     
     
     
-    //MARK: View Resizing
+    //MARK: View Resizing On keyboad show
     
     func subscribeToNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(resizeMainView(_:)), name: .UIKeyboardWillShow, object: nil)
@@ -90,6 +92,8 @@ class ThreadChartViewController: UIViewController {
             self.topConstraint.constant += amount
         }
     }
+    
+    
     //MARK: Hiding Keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         pitchTextField.resignFirstResponder()
@@ -98,19 +102,61 @@ class ThreadChartViewController: UIViewController {
     
     
     
-    // MARK: Thread calculation method
+    // MARK: Thread calculation methods
+    
+    func getValuesFromTextFields() -> (Double?,Double?){
+        
+        var result:(Double?,Double?) = (nil,nil)
+        guard let diamText = diameterTextField.text, diameterTextField.text != "",
+         let pitchText = pitchTextField.text, pitchTextField.text != "" else  { return result }
+        
+        let numberFormatter:NumberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.decimalSeparator = ","
+            return nf
+        }()
+        
+        
+        if diamText.contains("/") {
+            var numbers:[Double] = []
+            let tempArray = diamText.components(separatedBy: "/")
+            tempArray.forEach{elem in
+                if let num = Double(elem){
+                    numbers.append(num)
+                }else{
+                    return
+                }
+            }
+            result.0 = numbers[0] / numbers[1]
+        }else if diamText.contains("#"){
+            let zero = 0.06
+            let diamTextWithoutSign = diamText.trimmingCharacters(in: CharacterSet.decimalDigits.inverted)
+            let actualNumber = Double(diamTextWithoutSign)!
+            if actualNumber > 12 { return result }
+            result.0 = zero + (0.013 * actualNumber)
+        }else{
+            result.0 = numberFormatter.number(from: diamText) as? Double
+        }
+        
+        result.1 = numberFormatter.number(from: pitchText) as? Double
+        
+        return result
+    }
+    
     func calculateThread() {
-        
-        guard diameterTextField.text != nil, diameterTextField.text != "",          //Making Sure that text is enetered in text fields
-            pitchTextField.text != nil, pitchTextField.text != "" else {return}     //
-        
         
         // setting up numberFormatter
         let numberFormatter:NumberFormatter = {
             let nf = NumberFormatter()
             nf.numberStyle = .decimal
-            nf.maximumFractionDigits = 3
-            nf.minimumFractionDigits = 3
+            if standard == .iso{
+                nf.maximumFractionDigits = 3
+                nf.minimumFractionDigits = 3
+            }else if standard == .un{
+                nf.maximumFractionDigits = 4
+                nf.minimumFractionDigits = 4
+            }
             nf.decimalSeparator = ","//Locale.current.decimalSeparator
             return nf
         }()
@@ -127,9 +173,9 @@ class ThreadChartViewController: UIViewController {
             }
         }()
         
-        //Extracting diameter and pitch from textFields
-        guard let diameter = numberFormatter.number(from: diameterTextField.text!) as? Double else {return}
-        guard let pitch = numberFormatter.number(from: pitchTextField.text!) as? Double else {return}
+        
+        guard let diameter = getValuesFromTextFields().0 else {return}
+        guard let pitch = getValuesFromTextFields().1 else {return}
         
         //calculating thread
         var threadParams:[Thread.ThreadParametersName:Any] = [
@@ -178,6 +224,14 @@ class ThreadChartViewController: UIViewController {
         minorDiameterLabel.text = ""
         pitchDiameterLabel.text = ""
     }
+    
+    //MARK: Alert View
+    func showAlert(text:String){
+        let alertVC = UIAlertController(title: text, message: nil, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertVC.addAction(okButton)
+        present(alertVC, animated: true, completion: nil)
+    }
 }
 
 
@@ -186,34 +240,77 @@ class ThreadChartViewController: UIViewController {
 extension ThreadChartViewController:UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //checking if text already contains decimal separator
-        let dotSet = CharacterSet(charactersIn: ".,")
-        let countDots = (textField.text!.components(separatedBy: dotSet).count) - 1
         
-        //checking if new character is a number
-        let set = CharacterSet(charactersIn: "0123456789,.").inverted
-        let compSepByCharInSet = string.components(separatedBy: set)
-        print(compSepByCharInSet)
-        let numberFiltered = compSepByCharInSet.joined(separator: "")
-        
-        //actually performing checkings
-        if countDots > 0, (string == "," || string == ".") {
-            return false
-        }
-        
-        if string == numberFiltered {
-            if string == ""{
-                if textField.text?.characters.count == 1 {
-                    clearLabels()
-                    return true
-                }
-                let index = textField.text?.index(before: (textField.text?.endIndex)!)
-                textField.text?.remove(at: index!)
-                calculateThread()
+        if textField.tag == 1 { //working with diameter field
+            
+            //checking if text already contains decimal separator, division sign or number sign
+            let dotSet = CharacterSet(charactersIn: ".,/#")
+            let countDots = (textField.text!.components(separatedBy: dotSet).count) - 1
+            
+            //checking if new character is a number, decimal separator or division sign or number sign
+            let set = CharacterSet(charactersIn: "0123456789,./#").inverted
+            let compSepByCharInSet = string.components(separatedBy: set)
+            let numberFiltered = compSepByCharInSet.joined(separator: "")
+            
+            //performing checkings for dots count and field beggining
+            if (countDots > 0 || textField.text == ""), (string == "," || string == "." || string == "/") {
                 return false
             }
-            textField.text?.append(string)
-            calculateThread()
+            
+            //number sign need to be in the begging
+            if textField.text == "", string == "#"{
+                return true
+            }
+            
+            if string == numberFiltered {
+                if string == ""{
+                    if textField.text?.characters.count == 1 {
+                        clearLabels()
+                        return true
+                    }
+                    let index = textField.text?.index(before: (textField.text?.endIndex)!)
+                    textField.text?.remove(at: index!)
+                    calculateThread()
+                    return false
+                }
+                textField.text?.append(string)
+                calculateThread()
+            }
+
+        }
+        
+        
+        if textField.tag == 2{ // working with pitch field
+            
+            //checking if text already contains decimal separator
+            let dotSet = CharacterSet(charactersIn: ".,")
+            let countDots = (textField.text!.components(separatedBy: dotSet).count) - 1
+            
+            //checking if new character is a number
+            let set = CharacterSet(charactersIn: "0123456789,.").inverted
+            let compSepByCharInSet = string.components(separatedBy: set)
+            let numberFiltered = compSepByCharInSet.joined(separator: "")
+            
+            // performing checkings for dot count
+            if (countDots > 0), (string == "," || string == ".") {
+                return false
+            }
+            
+            if string == numberFiltered {
+                if string == ""{
+                    if textField.text?.characters.count == 1 {
+                        clearLabels()
+                        return true
+                    }
+                    let index = textField.text?.index(before: (textField.text?.endIndex)!)
+                    textField.text?.remove(at: index!)
+                    calculateThread()
+                    return false
+                }
+                textField.text?.append(string)
+                calculateThread()
+            }
+
         }
         
         return false

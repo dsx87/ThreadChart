@@ -205,7 +205,7 @@ struct Thread {
             }
         }()
         let Td2:Double = {
-            let base = 0.0015*cubeRoot(diameter) + 0.0015*sqrt(LE) + 0.015*cubeRoot(pitch)
+            let base = 0.0015*cubeRoot(diameter) + 0.0015*sqrt(LE) + 0.015*cubeRoot(pow(pitch,2))
             if boltTolerance == .oneA{ return 1.5 * base}
             if boltTolerance == .threeA { return 0.75 * base}
             return base
@@ -245,7 +245,7 @@ struct Thread {
         
         }()
         let TD2:Double = {
-            let base = 0.0015*cubeRoot(diameter) + 0.0015*sqrt(LE) + 0.015*cubeRoot(pitch)
+            let base = 0.0015*cubeRoot(diameter) + 0.0015*sqrt(LE) + 0.015*cubeRoot(pow(pitch,2))
             switch nutTolerance {
             case .oneB:
                 return 1.95 * base
@@ -272,29 +272,17 @@ struct Thread {
         let basicMinorDiameter = diameter - 2 * 5/8*H
         let UNRReferenceMinor = basicMinorDiameter - H/8
         
-        let maxMajorDiameter:Double = {
-            return isInternal ? 0.0 : diameter - es
-        }()
+        let maxMajorDiameter:Double = { return isInternal ? 0.0 : diameter - es }()
         
-        let minMajorDiameter:Double = {
-            return isInternal ? diameter : maxMajorDiameter - Td
-        }()
+        let minMajorDiameter:Double = { return isInternal ? diameter : maxMajorDiameter - Td }()
         
-        let maxPitchDiameter:Double = {
-            return isInternal ? basicPitchDiameter + TD2 : basicPitchDiameter - es
-        }()
+        let maxPitchDiameter:Double = { return isInternal ? basicPitchDiameter + TD2 : basicPitchDiameter - es }()
         
-        let minPitchDiameter:Double = {
-            return isInternal ? basicPitchDiameter : maxPitchDiameter - Td2
-        }()
+        let minPitchDiameter:Double = { return isInternal ? basicPitchDiameter : maxPitchDiameter - Td2 }()
         
-        let maxMinorDiameter:Double = {
-            return isInternal ? basicMinorDiameter + TD1 : UNRReferenceMinor - es
-        }()
+        let maxMinorDiameter:Double = { return isInternal ? basicMinorDiameter + TD1 : UNRReferenceMinor - es }()
         
-        let minMinorDiameter:Double = {
-            return isInternal ? basicMinorDiameter : 0.0
-        }()
+        let minMinorDiameter:Double = { return isInternal ? basicMinorDiameter : 0.0 }()
         
         
         return [
