@@ -75,17 +75,18 @@ class ThreadChartViewController: UIViewController {
     }
     
     func resizeMainView(_ notification:Notification){
+        
         let keyboardHeight = getKeyboardHeight(notification)
         if notification.name == .UIKeyboardWillShow{
             view.frame.origin.y = 0 - keyboardHeight
-            moveThreadParameters(by: keyboardHeight, isKeyboardHiding: false)
+            moveThreadParametersLabels(by: keyboardHeight, isKeyboardHiding: false)
         }else if notification.name == .UIKeyboardWillHide {
             view.frame.origin.y = 0
-            moveThreadParameters(by: keyboardHeight, isKeyboardHiding: true)
+            moveThreadParametersLabels(by: keyboardHeight, isKeyboardHiding: true)
         }
     }
     
-    func moveThreadParameters(by amount:CGFloat, isKeyboardHiding:Bool) {
+    func moveThreadParametersLabels(by amount:CGFloat, isKeyboardHiding:Bool) {
         if isKeyboardHiding{
             self.topConstraint.constant -= amount
         }else {
@@ -110,13 +111,14 @@ class ThreadChartViewController: UIViewController {
         guard let diamText = diameterTextField.text, diameterTextField.text != "",
          let pitchText = pitchTextField.text, pitchTextField.text != "" else  { return result }
         
+        /*
         let numberFormatter:NumberFormatter = {
             let nf = NumberFormatter()
             nf.numberStyle = .decimal
             nf.decimalSeparator = ","
             return nf
         }()
-        
+        */
         
         if diamText.contains("/") {
             var numbers:[Double] = []
@@ -136,10 +138,10 @@ class ThreadChartViewController: UIViewController {
             if actualNumber > 12 { return result }
             result.0 = zero + (0.013 * actualNumber)
         }else{
-            result.0 = numberFormatter.number(from: diamText) as? Double
+            result.0 = Double(diamText)
         }
         
-        result.1 = numberFormatter.number(from: pitchText) as? Double
+        result.1 = Double(pitchText)
         
         return result
     }
@@ -157,7 +159,7 @@ class ThreadChartViewController: UIViewController {
                 nf.maximumFractionDigits = 4
                 nf.minimumFractionDigits = 4
             }
-            nf.decimalSeparator = ","//Locale.current.decimalSeparator
+            nf.decimalSeparator = Locale.current.decimalSeparator
             return nf
         }()
         
@@ -244,16 +246,16 @@ extension ThreadChartViewController:UITextFieldDelegate {
         if textField.tag == 1 { //working with diameter field
             
             //checking if text already contains decimal separator, division sign or number sign
-            let dotSet = CharacterSet(charactersIn: ".,/#")
+            let dotSet = CharacterSet(charactersIn: "./#")
             let countDots = (textField.text!.components(separatedBy: dotSet).count) - 1
             
             //checking if new character is a number, decimal separator or division sign or number sign
-            let set = CharacterSet(charactersIn: "0123456789,./#").inverted
+            let set = CharacterSet(charactersIn: "0123456789./#").inverted
             let compSepByCharInSet = string.components(separatedBy: set)
             let numberFiltered = compSepByCharInSet.joined(separator: "")
             
             //performing checkings for dots count and field beggining
-            if (countDots > 0 || textField.text == ""), (string == "," || string == "." || string == "/") {
+            if (countDots > 0 || textField.text == ""), (string == "." || string == "/") {
                 return false
             }
             
@@ -283,16 +285,16 @@ extension ThreadChartViewController:UITextFieldDelegate {
         if textField.tag == 2{ // working with pitch field
             
             //checking if text already contains decimal separator
-            let dotSet = CharacterSet(charactersIn: ".,")
+            let dotSet = CharacterSet(charactersIn: ".")
             let countDots = (textField.text!.components(separatedBy: dotSet).count) - 1
             
             //checking if new character is a number
-            let set = CharacterSet(charactersIn: "0123456789,.").inverted
+            let set = CharacterSet(charactersIn: "0123456789.").inverted
             let compSepByCharInSet = string.components(separatedBy: set)
             let numberFiltered = compSepByCharInSet.joined(separator: "")
             
             // performing checkings for dot count
-            if (countDots > 0), (string == "," || string == ".") {
+            if (countDots > 0), string == "." {
                 return false
             }
             
