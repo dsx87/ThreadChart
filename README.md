@@ -1,3 +1,3 @@
 # ThreadChart
 
-App for calculating screw thread allowance. Made for my own use, and will be shared (hope so) through appstore.
+App for calculating screw thread allowance. Able to calculate any ISO/UN thread (including non standard). 
