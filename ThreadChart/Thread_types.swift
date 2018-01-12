@@ -23,34 +23,18 @@ extension Thread {
         
     }
     
-    enum ThreadStandard: Int{
-        case iso, un
-        
-        static var count:Int {
-            var max = 0
-            while let _ = ThreadStandard(rawValue: max) {max += 1}
-            return max
-        }
-    }
+    enum ThreadStandard: Int{ case iso, un }
+    
+    
     struct Tolerances {
         struct ISO {
-            enum Bolt:Int {
-                case d, e, f, g, h
-            }
-            
-            enum Nut:Int {
-                case E, F, G, H
-            }
-            
+            enum Bolt:Int { case d, e, f, g, h }
+            enum Nut:Int { case E, F, G, H }
         }
         
         struct UN {
-            enum Bolt:Int {
-                case oneA, twoA, threeA
-            }
-            enum Nut:Int {
-                case oneB, twoB, threeB
-            }
+            enum Bolt:Int { case oneA, twoA, threeA }
+            enum Nut:Int { case oneB, twoB, threeB }
         }
     }
 }

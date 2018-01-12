@@ -11,15 +11,7 @@ import Foundation
 let cubeRoot:(Double) -> Double = {x in Double(pow(x, 1/3))}
 
 struct Thread {
-    static let threadTypes = ["Metric Threads (ISO)","United Threads (UN)"]
-    static let isoNutTolerances = ["E","F","G","H"]
-    static let isoBoltTolreances = ["d","e","f","g","h"]
-    
-    static let unNutTolerances = ["1B","2B","3B"]
-    static let unBoltTolerances = ["1A","2A","3A"]
-    
-    
-    
+   
     let tapHole:Double?
     let threadPitch:Double
     let isInternal:Bool
@@ -79,11 +71,11 @@ struct Thread {
     
     
     private static func calculateISOThread(diameter:Double, pitch:Double, isInternal:Bool, boltToleranceLevel:Any, nutToleranceLevel:Any) -> [ThreadResultsName:Any?] {
-        //Helper functions------------------------------------------------
+        
         let boltTolerance = boltToleranceLevel as! Tolerances.ISO.Bolt
         let nutTolerance = nutToleranceLevel as! Tolerances.ISO.Nut
         
-        
+        //Help functions-------------------------------------------------
         func get_es(toleranceLevel:Tolerances.ISO.Bolt, pitch:Double) -> Double {
             switch toleranceLevel {
             case .d: return -(80 + 11*pitch)
@@ -123,7 +115,6 @@ struct Thread {
             return (td,td1,td2)
         }
         
-        
         //---------------------------------------------------------------
         
         //Main Logic-----------------------------------------------------
@@ -134,43 +125,25 @@ struct Thread {
         let td2 = getTDs().2 / 1000
         
         
-        
-        
         let H = (sqrt(3)/2)*pitch
         let basicPitchDiam = diameter - (2*3/8*H)
         let basicMinorDiam = diameter - (2*5/8*H)
         let Cmin = 0.125*pitch
         let Cmax = H/4 - Cmin*(1 - cos(Double.pi/3 - acos(1 - td2/4*Cmin))) + td2/2
         
-        let tapHole:Double? = {
-            return isInternal ?  diameter - pitch :  nil
-        }()
+        let tapHole:Double? = { return isInternal ?  diameter - pitch :  nil }()
         
-        let maxMajorDiam:Double = {
-            return isInternal ? diameter : diameter + es
-        }()
+        let maxMajorDiam:Double = { return isInternal ? diameter : diameter + es }()
         
-        let minMajorDiam:Double = {
-            return isInternal ? diameter + EI : maxMajorDiam - td
-        }()
+        let minMajorDiam:Double = { return isInternal ? diameter + EI : maxMajorDiam - td }()
         
-        let minPitchDiam:Double = {
-            return isInternal ? basicPitchDiam + EI : (basicPitchDiam + es) - td2
-        }()
+        let minPitchDiam:Double = { return isInternal ? basicPitchDiam + EI : (basicPitchDiam + es) - td2 }()
         
-        let maxPitchDiam:Double = {
-            return isInternal ? minPitchDiam + td2 : basicPitchDiam + es
-        }()
+        let maxPitchDiam:Double = { return isInternal ? minPitchDiam + td2 : basicPitchDiam + es }()
         
-        let minMinorDiam:Double = {
-            return isInternal ? basicMinorDiam + EI :
-                basicMinorDiam - H/2 + 2*Cmin + es - td2
-        }()
+        let minMinorDiam:Double = { return isInternal ? basicMinorDiam + EI : basicMinorDiam - H/2 + 2*Cmin + es - td2 }()
         
-        let maxMinorDiam:Double = {
-            return isInternal ? minMinorDiam + td1 :
-                basicMinorDiam - H/2 + 2*Cmax + es - td2
-        }()
+        let maxMinorDiam:Double = { return isInternal ? minMinorDiam + td1 : basicMinorDiam - H/2 + 2*Cmax + es - td2 }()
         
         return [
             .maxMajor :maxMajorDiam,
@@ -189,6 +162,7 @@ struct Thread {
     private static func calculateUNThread(diameter:Double, TPI:Double, isInternal:Bool,
                                           boltToleranceLevel:Any,
                                           nutToleranceLevel:Any) -> [ThreadResultsName:Any]{
+        
         let boltTolerance = boltToleranceLevel as! Tolerances.UN.Bolt
         let nutTolerance = nutToleranceLevel as! Tolerances.UN.Nut
         let pitch:Double = 1.0/Double(TPI)

@@ -11,6 +11,8 @@ import UIKit
 class ThreadChartViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var helpButton: UIButton!
+    
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var majorDiameterLabel: UILabel!
     @IBOutlet weak var pitchDiameterLabel: UILabel!
@@ -31,7 +33,7 @@ class ThreadChartViewController: UIViewController {
         pitchTextField.delegate = self
         inOutControl.addTarget(self, action: #selector(calculateThread), for: .valueChanged)
         clearLabels()
-        
+        setUI()
         revealViewControllerHandler()
         subscribeToNotifications()
     }
@@ -39,6 +41,7 @@ class ThreadChartViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromNotifications()
+        
     }
     
     //MARK: Reveal VC methods
@@ -78,9 +81,15 @@ class ThreadChartViewController: UIViewController {
         
         let keyboardHeight = getKeyboardHeight(notification)
         if notification.name == .UIKeyboardWillShow{
+            menuButton.removeTarget(revealViewController(),
+                                    action: #selector(SWRevealViewController.revealToggle(_:)),
+                                    for: .touchUpInside)
             view.frame.origin.y = 0 - keyboardHeight
             moveThreadParametersLabels(by: keyboardHeight, isKeyboardHiding: false)
         }else if notification.name == .UIKeyboardWillHide {
+            menuButton.addTarget(revealViewController(),
+                                 action: #selector(SWRevealViewController.revealToggle(_:)),
+                                 for: .touchUpInside)
             view.frame.origin.y = 0
             moveThreadParametersLabels(by: keyboardHeight, isKeyboardHiding: true)
         }
@@ -108,21 +117,17 @@ class ThreadChartViewController: UIViewController {
     func getValuesFromTextFields() -> (Double?,Double?){
         
         var result:(Double?,Double?) = (nil,nil)
+        
+        //Checking if fields is not empty
         guard let diamText = diameterTextField.text, diameterTextField.text != "",
-         let pitchText = pitchTextField.text, pitchTextField.text != "" else  { return result }
+            let pitchText = pitchTextField.text, pitchTextField.text != "" else  { return result }
         
-        /*
-        let numberFormatter:NumberFormatter = {
-            let nf = NumberFormatter()
-            nf.numberStyle = .decimal
-            nf.decimalSeparator = ","
-            return nf
-        }()
-        */
-        
-        if diamText.contains("/") {
+        //Help Function to work with fractions
+        func calculateFraction(_ string:String) -> Double? {
             var numbers:[Double] = []
-            let tempArray = diamText.components(separatedBy: "/")
+            let tempArray = string.components(separatedBy: "/")
+            if tempArray.count != 2 {return nil}
+            if tempArray[1] == "" || tempArray[0] == "" {return nil}
             tempArray.forEach{elem in
                 if let num = Double(elem){
                     numbers.append(num)
@@ -130,11 +135,28 @@ class ThreadChartViewController: UIViewController {
                     return
                 }
             }
-            result.0 = numbers[0] / numbers[1]
-        }else if diamText.contains("#"){
+            return numbers[0] / numbers[1]
+        }
+        //------------------------------------
+        
+        
+        if diamText.contains(" "){ //whole and fraction input
+            let fractionAndWholeNumberSeparated = diamText.components(separatedBy: " ")
+            if fractionAndWholeNumberSeparated.count > 2 { return result }
+            
+            guard let wholeNum = Double(fractionAndWholeNumberSeparated[0]) else { return result }
+            guard let fractionNum = calculateFraction(fractionAndWholeNumberSeparated[1]) else { return result }
+            
+            result.0 = wholeNum + fractionNum
+            
+        }else if diamText.contains("/") {  //fraction input
+            result.0 = calculateFraction(diamText)
+            
+            
+        }else if diamText.contains("#"){  //number input
             let zero = 0.06
             let diamTextWithoutSign = diamText.trimmingCharacters(in: CharacterSet.decimalDigits.inverted)
-            let actualNumber = Double(diamTextWithoutSign)!
+            guard let actualNumber = Double(diamTextWithoutSign) else {return result}
             if actualNumber > 12 { return result }
             result.0 = zero + (0.013 * actualNumber)
         }else{
@@ -193,7 +215,6 @@ class ThreadChartViewController: UIViewController {
         }else if standard == .un{
             threadParams[Thread.ThreadParametersName.toleranceLevelBolt] = Thread.Tolerances.UN.Bolt.twoA   // tolerances are hardcoded for now
             threadParams[Thread.ThreadParametersName.toleranceLevelNut] = Thread.Tolerances.UN.Nut.twoB      //
-            
         }
         
         let thread = Thread(threadParameters: threadParams)
@@ -224,7 +245,15 @@ class ThreadChartViewController: UIViewController {
         tapHoleLabel.text = ""
         majorDiameterLabel.text = ""
         minorDiameterLabel.text = ""
-        pitchDiameterLabel.text = ""
+        pitchDiameterLabel.text = " \r \r Enter thread diameter and pitch (TPI)"
+    }
+    
+    func setUI(){
+        helpButton.layer.bounds.size = CGSize(width: 25.0, height: 25.0)
+        helpButton.layer.borderWidth = 1
+        helpButton.layer.borderColor = UIColor.white.cgColor
+        helpButton.layer.cornerRadius = helpButton.layer.bounds.size.height / 2
+        
     }
     
     //MARK: Alert View
@@ -234,6 +263,33 @@ class ThreadChartViewController: UIViewController {
         alertVC.addAction(okButton)
         present(alertVC, animated: true, completion: nil)
     }
+    
+    //MARK: Popover view
+    @IBAction func helpButtonTap(sender: UIButton){
+        let popController = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "popover")
+        
+        popController.modalPresentationStyle = .popover
+        popController.popoverPresentationController?.permittedArrowDirections = .up
+        popController.popoverPresentationController?.delegate = self
+        popController.popoverPresentationController?.sourceView = sender
+        popController.popoverPresentationController?.sourceRect = sender.bounds
+        
+        let label = popController.view as! UILabel
+        if standard == .iso {
+            label.text = "Enter Thread Nominal Diameter and Pitch"
+        }else if standard == .un{
+            label.text = "Enter Thread Nominal Diameter (Fraction or Decimal) anr TPI \r" +
+            "For number diameter use '#' sign (e.g. #10)"
+        }
+        
+        self.present(popController, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+    
+    
 }
 
 
@@ -241,45 +297,54 @@ class ThreadChartViewController: UIViewController {
 // MARK: TextFieldDelegate Methods
 extension ThreadChartViewController:UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if textField.tag == 1 { //working with diameter field
             
-            //checking if text already contains decimal separator, division sign or number sign
-            let dotSet = CharacterSet(charactersIn: "./#")
-            let countDots = (textField.text!.components(separatedBy: dotSet).count) - 1
             
-            //checking if new character is a number, decimal separator or division sign or number sign
-            let set = CharacterSet(charactersIn: "0123456789./#").inverted
-            let compSepByCharInSet = string.components(separatedBy: set)
-            let numberFiltered = compSepByCharInSet.joined(separator: "")
-            
-            //performing checkings for dots count and field beggining
-            if (countDots > 0 || textField.text == ""), (string == "." || string == "/") {
-                return false
-            }
-            
-            //number sign need to be in the begging
-            if textField.text == "", string == "#"{
-                return true
-            }
-            
-            if string == numberFiltered {
-                if string == ""{
-                    if textField.text?.characters.count == 1 {
-                        clearLabels()
-                        return true
-                    }
-                    let index = textField.text?.index(before: (textField.text?.endIndex)!)
-                    textField.text?.remove(at: index!)
-                    calculateThread()
+            if textField.tag == 1 { //working with diameter field
+                
+                //checking if text already contains decimal separator, division sign or number sign
+                let singleCharacterAllowedSet = CharacterSet(charactersIn: "./#")
+                let countDots = (textField.text!.components(separatedBy: singleCharacterAllowedSet).count) - 1
+                
+                //checking if new character is a number, decimal separator or division sign or number sign
+                let allowedCharactersSet = CharacterSet(charactersIn: "0123456789./# ").inverted
+                let compSepByCharInSet = string.components(separatedBy: allowedCharactersSet)
+                let numberFiltered = compSepByCharInSet.joined(separator: "")
+                
+                //performing checkings for dots count and field beggining
+                if (countDots > 0 || textField.text == ""), (string == "." || string == "/" || string == " ") {
                     return false
                 }
-                textField.text?.append(string)
-                calculateThread()
+                
+                //number sign need to be in the begging
+                if textField.text == "", string == "#"{
+                    return true
+                }
+                
+                if string == numberFiltered { // if inserting character is allowed then continue
+                    if string == ""{                                    //if backspace pressed
+                        if textField.text?.characters.count == 1 {      //and it will remove last symbol in a field
+                            clearLabels()                               //then clearing labels
+                            return true
+                        }
+                        let index = textField.text?.index(before: (textField.text?.endIndex)!)  //index of last character in string
+                        textField.text?.remove(at: index!)                                      //removing it and updating calculations
+                        calculateThread()
+                        return false
+                    }
+                    textField.text?.append(string)
+                    calculateThread()
+                }
+                
             }
-
-        }
+        
         
         
         if textField.tag == 2{ // working with pitch field
@@ -312,7 +377,7 @@ extension ThreadChartViewController:UITextFieldDelegate {
                 textField.text?.append(string)
                 calculateThread()
             }
-
+            
         }
         
         return false
@@ -320,4 +385,11 @@ extension ThreadChartViewController:UITextFieldDelegate {
         
     }
     
+}
+
+//MARK: popoverPresentationController Delegate methods
+extension ThreadChartViewController: UIPopoverPresentationControllerDelegate{
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
 }
