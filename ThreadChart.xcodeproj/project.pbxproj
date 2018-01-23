@@ -148,7 +148,7 @@
 					1DC7F9521FCCB78400E4237C = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -313,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FCLYBXX3KC;
 				INFOPLIST_FILE = ThreadChart/Info.plist;
@@ -321,6 +321,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ip.threadChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0c286756-72dc-409b-aa8a-177eff64516b";
+				PROVISIONING_PROFILE_SPECIFIER = ThreadChart;
 				SWIFT_OBJC_BRIDGING_HEADER = "ThreadChart/ThreadChart-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -333,8 +335,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Igor Pivnyk (FCLYBXX3KC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Igor Pivnyk (FCLYBXX3KC)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FCLYBXX3KC;
 				INFOPLIST_FILE = ThreadChart/Info.plist;
@@ -342,6 +344,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ip.threadChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0c286756-72dc-409b-aa8a-177eff64516b";
+				PROVISIONING_PROFILE_SPECIFIER = ThreadChart;
 				SWIFT_OBJC_BRIDGING_HEADER = "ThreadChart/ThreadChart-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

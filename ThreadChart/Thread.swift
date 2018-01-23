@@ -161,14 +161,12 @@ struct Thread {
     
     private static func calculateUNThread(diameter:Double, TPI:Double, isInternal:Bool,
                                           boltToleranceLevel:Any,
-                                          nutToleranceLevel:Any) -> [ThreadResultsName:Any]{
+                                          nutToleranceLevel:Any) -> [ThreadResultsName:Any?]{
         
         let boltTolerance = boltToleranceLevel as! Tolerances.UN.Bolt
         let nutTolerance = nutToleranceLevel as! Tolerances.UN.Nut
         let pitch:Double = 1.0/Double(TPI)
-        let tapHole = {
-            return isInternal ? diameter - 1/pitch : nil
-        }
+        let tapHole:Double? = { return isInternal ? diameter - pitch : nil }()
         
         let LE = 9*pitch
         let Td:Double = {
