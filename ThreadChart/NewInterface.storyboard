@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -425,16 +424,6 @@ TOLERANCE CALULATOR</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tz-bL-LOg" customClass="HelpButton" customModule="ThreadChart" customModuleProvider="target">
-                                <rect key="frame" x="279" y="28" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="wlK-Rw-wg8"/>
-                                </constraints>
-                                <state key="normal" title="?"/>
-                                <connections>
-                                    <action selector="helpButtonTapWithSender:" destination="NTc-Fw-G1m" eventType="touchUpInside" id="QyG-ru-GDJ"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F0R-nW-foZ">
                                 <rect key="frame" x="203" y="400" width="100" height="29"/>
                                 <constraints>
@@ -473,7 +462,6 @@ TOLERANCE CALULATOR</string>
                             <constraint firstItem="Ykd-RC-qq9" firstAttribute="leading" secondItem="tyo-26-YPY" secondAttribute="leading" id="OpY-X3-rvV"/>
                             <constraint firstItem="hCi-5L-fFO" firstAttribute="top" secondItem="F0R-nW-foZ" secondAttribute="bottom" constant="28" id="RoR-Bz-Puq"/>
                             <constraint firstItem="ig2-vB-ZBb" firstAttribute="top" secondItem="iQc-PF-1Vm" secondAttribute="bottom" constant="10" id="TYs-Ef-jCY"/>
-                            <constraint firstItem="8tz-bL-LOg" firstAttribute="top" secondItem="XWn-ud-v5b" secondAttribute="bottom" constant="8" id="Uo2-JJ-QqT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ip8-ia-Ykb" secondAttribute="trailing" constant="-16" id="Ver-69-Tn1"/>
                             <constraint firstAttribute="trailing" secondItem="F0R-nW-foZ" secondAttribute="trailing" constant="17" id="Z1S-t1-WfW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dt2-Jp-hT2" secondAttribute="trailing" constant="30" id="Zf3-9p-oqc"/>
@@ -486,8 +474,6 @@ TOLERANCE CALULATOR</string>
                             <constraint firstItem="aRH-qf-Ba5" firstAttribute="leading" secondItem="c5u-Mh-j5V" secondAttribute="leading" id="jMZ-9k-eam"/>
                             <constraint firstItem="c5u-Mh-j5V" firstAttribute="centerY" secondItem="tyo-26-YPY" secondAttribute="centerY" id="lCo-cN-2TU"/>
                             <constraint firstItem="Ykd-RC-qq9" firstAttribute="trailing" secondItem="TaE-4L-gm6" secondAttribute="trailing" id="nuO-eZ-6xb"/>
-                            <constraint firstItem="8tz-bL-LOg" firstAttribute="height" secondItem="aRH-qf-Ba5" secondAttribute="height" id="o6D-HI-pew"/>
-                            <constraint firstAttribute="trailing" secondItem="8tz-bL-LOg" secondAttribute="trailing" constant="16" id="u9I-hV-1it"/>
                             <constraint firstItem="hjf-pV-IJN" firstAttribute="centerY" secondItem="tyo-26-YPY" secondAttribute="centerY" id="uMh-5G-sms"/>
                             <constraint firstItem="TaE-4L-gm6" firstAttribute="top" secondItem="Ykd-RC-qq9" secondAttribute="bottom" constant="3" id="w2T-q8-gwD"/>
                             <constraint firstItem="jhq-q0-zHf" firstAttribute="centerX" secondItem="b7e-4v-eLe" secondAttribute="centerX" id="wOM-v7-0jF"/>
@@ -497,7 +483,6 @@ TOLERANCE CALULATOR</string>
                     <navigationItem key="navigationItem" id="N5i-Nj-MjQ"/>
                     <connections>
                         <outlet property="diameterTextField" destination="tyo-26-YPY" id="0mT-Wt-lYz"/>
-                        <outlet property="helpButton" destination="8tz-bL-LOg" id="N1P-R7-cIG"/>
                         <outlet property="inOutSwitch" destination="aRH-qf-Ba5" id="cb1-D7-Wdg"/>
                         <outlet property="majorDiameterLabel" destination="b2F-gx-rQg" id="SUK-ht-x8g"/>
                         <outlet property="minorDiameterLabel" destination="f9d-XI-yTE" id="8r8-Uu-h1d"/>
@@ -510,44 +495,6 @@ TOLERANCE CALULATOR</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCY-pA-0k0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2831" y="356"/>
-        </scene>
-        <!--Help View Controller-->
-        <scene sceneID="C9h-Sk-Fob">
-            <objects>
-                <viewController storyboardIdentifier="popover" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="egp-je-qnX" customClass="HelpViewController" customModule="ThreadChart" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EU3-yd-D3S"/>
-                        <viewControllerLayoutGuide type="bottom" id="O7e-q1-Nbv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gSr-sa-SKk">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="popover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auF-22-GMs">
-                                <rect key="frame" x="50" y="100.5" width="200" height="300"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="KvC-Uw-GjP"/>
-                                    <constraint firstAttribute="width" constant="200" id="eIm-RN-UrR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="auF-22-GMs" firstAttribute="centerX" secondItem="gSr-sa-SKk" secondAttribute="centerX" id="5pl-TZ-DKX"/>
-                            <constraint firstItem="auF-22-GMs" firstAttribute="centerY" secondItem="gSr-sa-SKk" secondAttribute="centerY" id="IBB-mF-6GW"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="300" height="500"/>
-                    <connections>
-                        <outlet property="label" destination="auF-22-GMs" id="aBt-wk-BXc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJ2-on-vRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4588" y="299"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LIG-wi-V6g">
@@ -676,19 +623,6 @@ TOLERANCE CALULATOR</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOR-17-Q0l" customClass="HelpButton" customModule="ThreadChart" customModuleProvider="target">
-                                <rect key="frame" x="16" y="271.5" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="AKc-UQ-Xx6"/>
-                                    <constraint firstAttribute="width" secondItem="rOR-17-Q0l" secondAttribute="height" multiplier="1:1" id="EaE-gm-UjP"/>
-                                </constraints>
-                                <state key="normal" title="?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="helpButtonTapWithSender:" destination="jrt-hB-bVL" eventType="touchUpInside" id="ACZ-YQ-MOa"/>
-                                </connections>
-                            </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzR-0y-qZL" userLabel="decimal view" customClass="UNDecimalInputView" customModule="ThreadChart" customModuleProvider="target">
                                 <rect key="frame" x="27.5" y="45.5" width="93" height="39"/>
                                 <subviews>
@@ -870,7 +804,6 @@ TOLERANCE CALULATOR</string>
                             <constraint firstItem="t5m-Sn-N1n" firstAttribute="top" secondItem="GvB-2i-3KU" secondAttribute="bottom" constant="5" id="LJW-Y7-W4r"/>
                             <constraint firstItem="fRK-XK-f3J" firstAttribute="centerY" secondItem="paK-Sn-cDA" secondAttribute="centerY" id="QQp-f0-KeZ"/>
                             <constraint firstItem="jTQ-Dw-prZ" firstAttribute="centerY" secondItem="paK-Sn-cDA" secondAttribute="centerY" id="Suh-9U-B0z"/>
-                            <constraint firstItem="rOR-17-Q0l" firstAttribute="leading" secondItem="G74-hB-Ji4" secondAttribute="leading" constant="16" id="TJA-5G-Azu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WGn-4g-pal" secondAttribute="trailing" id="Uah-13-Oin"/>
                             <constraint firstItem="UA1-eh-rcH" firstAttribute="top" secondItem="Nam-0a-RaF" secondAttribute="bottom" constant="24" id="V8y-TP-w6h"/>
                             <constraint firstItem="t5m-Sn-N1n" firstAttribute="centerX" secondItem="G74-hB-Ji4" secondAttribute="centerX" id="XMR-7c-NtJ"/>
@@ -890,7 +823,6 @@ TOLERANCE CALULATOR</string>
                             <constraint firstItem="kzR-0y-qZL" firstAttribute="centerX" secondItem="akW-nT-cuG" secondAttribute="centerX" id="oP3-TC-8cC"/>
                             <constraint firstAttribute="trailing" secondItem="UA1-eh-rcH" secondAttribute="trailing" constant="6" id="rVP-rz-0g3"/>
                             <constraint firstItem="GvB-2i-3KU" firstAttribute="top" secondItem="Nam-0a-RaF" secondAttribute="bottom" constant="50" id="rYu-Od-6XX"/>
-                            <constraint firstItem="rOR-17-Q0l" firstAttribute="centerY" secondItem="G74-hB-Ji4" secondAttribute="centerY" id="s9v-8o-Z5m"/>
                             <constraint firstItem="WGn-4g-pal" firstAttribute="top" secondItem="bet-jv-QHA" secondAttribute="bottom" constant="28" id="skk-ZD-EVo"/>
                             <constraint firstItem="paK-Sn-cDA" firstAttribute="centerX" secondItem="z1z-f0-Eei" secondAttribute="centerX" id="svR-ls-0SZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GvB-2i-3KU" secondAttribute="trailing" constant="-16" id="wnG-s0-uoU"/>
@@ -900,7 +832,6 @@ TOLERANCE CALULATOR</string>
                     <connections>
                         <outlet property="decimalView" destination="kzR-0y-qZL" id="rNv-Br-3Ao"/>
                         <outlet property="fractionView" destination="akW-nT-cuG" id="AKN-gH-zim"/>
-                        <outlet property="helpButton" destination="rOR-17-Q0l" id="0ck-Kq-Css"/>
                         <outlet property="inOutSwitch" destination="xZB-8s-wZQ" id="2Z1-9E-hPQ"/>
                         <outlet property="inputSwitch" destination="UA1-eh-rcH" id="bBK-m8-yyF"/>
                         <outlet property="majorDiameterLabel" destination="paK-Sn-cDA" id="Svy-LR-0xR"/>
