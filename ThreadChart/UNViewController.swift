@@ -56,6 +56,7 @@ class UNViewController: ThreadChartViewController {
         activeView?.setTextFieldsDelegate(to: self)
     }
     
+    
     @objc override func getParametersAndCalculate() {
         isInternal = {
             switch inOutSwitch.selectedSegmentIndex{

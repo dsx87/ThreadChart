@@ -9,8 +9,6 @@
 import UIKit
 
 class UNNumberInputView: UIView {
-
     @IBOutlet weak var number:UITextField!
     @IBOutlet weak var TPI:UITextField!
-    @IBOutlet weak var inOut:UISegmentedControl!
 }

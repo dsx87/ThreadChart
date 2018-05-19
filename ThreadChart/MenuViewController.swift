@@ -10,16 +10,21 @@ import UIKit
 
 class MenuViewController: UITableViewController {
 
+    let ISOvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "ISO")
+    let UNvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "UN")
     
     let threads = [["title":"ISO",
-                         "description":"M/MF 60º"],
-                        ["title":"UN",
-                         "description":"C/F/S/EF 60º"]
-    ]
+                    "description":"M/MF 60º"],
+                   ["title":"UN",
+                    "description":"C/F/S/EF 60º"
+                    ]
+                    ]
+    var cellColors = [UIColor]()
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = UIColor.white
-        
+        cellColors.append(ISOvc.view.backgroundColor!)
+        cellColors.append(UNvc.view.backgroundColor!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +43,7 @@ class MenuViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let defaultRowHeight = tableView.rowHeight
         if indexPath.row == 0 {
-            return 80
+            return 110
         }
         return defaultRowHeight
     }
@@ -54,6 +59,7 @@ class MenuViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "threadName", for: indexPath)
         let threadDesc = threads[indexPath.row - 1]
         cell.textLabel?.text = threadDesc["title"]
+        cell.textLabel?.textColor = cellColors[indexPath.row - 1]
         cell.detailTextLabel?.text = threadDesc["description"]
 
         return cell
@@ -62,8 +68,7 @@ class MenuViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let thread = threads[indexPath.row - 1]
-        let ISOvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "ISO")
-        let UNvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "UN")
+        
         
         if thread["title"] == "ISO"{
             splitViewController?.showDetailViewController(ISOvc, sender: nil)
@@ -71,14 +76,6 @@ class MenuViewController: UITableViewController {
             splitViewController?.showDetailViewController(UNvc, sender: nil)
         }
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

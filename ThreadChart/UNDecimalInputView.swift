@@ -11,5 +11,4 @@ import UIKit
 class UNDecimalInputView: UIView {
     @IBOutlet weak var diameter:UITextField!
     @IBOutlet weak var TPI:UITextField!
-
 }
