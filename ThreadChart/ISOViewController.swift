@@ -26,7 +26,7 @@ class ISOViewController: ThreadChartViewController {
     }
     
     
-    @objc func getParametersAndCalculate() {
+    @objc override func getParametersAndCalculate() {
         isInternal = {
             switch inOutSwitch.selectedSegmentIndex{
             case 0:
@@ -37,8 +37,11 @@ class ISOViewController: ThreadChartViewController {
                 return false
             }
         }()
-        diameter = diameterTextField.text?.doubleValue
-        pitch = pitchTextField.text?.doubleValue
+        if let diameter = diameterTextField.text?.doubleValue,
+            let pitch = pitchTextField.text?.doubleValue{
+                self.diameter = diameter
+                self.pitch = pitch
+        } else { clearLabels() }
         
         calculateThread()
     }

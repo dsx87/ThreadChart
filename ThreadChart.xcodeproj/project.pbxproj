@@ -11,15 +11,15 @@
 		1D14C6F720AF626F007E5A75 /* UNFractionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6F620AF626F007E5A75 /* UNFractionInputView.swift */; };
 		1D14C6F920AF6283007E5A75 /* UNNumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6F820AF6283007E5A75 /* UNNumberInputView.swift */; };
 		1D14C6FB20AF629A007E5A75 /* UNDecimalInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6FA20AF629A007E5A75 /* UNDecimalInputView.swift */; };
-		1D14C6FD20AF62CE007E5A75 /* ISOInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6FC20AF62CE007E5A75 /* ISOInputView.swift */; };
 		1D1C6CD220AC950D00718C76 /* ThreadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD120AC950D00718C76 /* ThreadProtocol.swift */; };
-		1D1C6CD420AC98E700718C76 /* Tolerances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD320AC98E700718C76 /* Tolerances.swift */; };
+		1D1C6CD420AC98E700718C76 /* TolerancesAndUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD320AC98E700718C76 /* TolerancesAndUnits.swift */; };
 		1D1C6CD620ACA06A00718C76 /* ISOThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD520ACA06A00718C76 /* ISOThread.swift */; };
 		1D1C6CD820ACAEE600718C76 /* UNThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD720ACAEE600718C76 /* UNThread.swift */; };
 		1D5237F81FE9954A00B284A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5237F71FE9954A00B284A9 /* LaunchScreen.storyboard */; };
 		1D69197220B02DB800AF827F /* Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197120B02DB800AF827F /* Fraction.swift */; };
 		1D69197420B05BFD00AF827F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197320B05BFD00AF827F /* StringExtension.swift */; };
 		1D69197620B05DEB00AF827F /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197520B05DEB00AF827F /* ViewExtension.swift */; };
+		1D69197820B0816D00AF827F /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197720B0816D00AF827F /* NumberFormatter.swift */; };
 		1D7603F01FF6B7BA008B914D /* NewInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */; };
 		1D87306B2094FAE20084EB20 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D87306A2094FAE20084EB20 /* HelpViewController.swift */; };
 		1DC7F9571FCCB78400E4237C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F9561FCCB78400E4237C /* AppDelegate.swift */; };
@@ -35,15 +35,15 @@
 		1D14C6F620AF626F007E5A75 /* UNFractionInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNFractionInputView.swift; sourceTree = "<group>"; };
 		1D14C6F820AF6283007E5A75 /* UNNumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNumberInputView.swift; sourceTree = "<group>"; };
 		1D14C6FA20AF629A007E5A75 /* UNDecimalInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNDecimalInputView.swift; sourceTree = "<group>"; };
-		1D14C6FC20AF62CE007E5A75 /* ISOInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOInputView.swift; sourceTree = "<group>"; };
 		1D1C6CD120AC950D00718C76 /* ThreadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadProtocol.swift; sourceTree = "<group>"; };
-		1D1C6CD320AC98E700718C76 /* Tolerances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tolerances.swift; sourceTree = "<group>"; };
+		1D1C6CD320AC98E700718C76 /* TolerancesAndUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TolerancesAndUnits.swift; sourceTree = "<group>"; };
 		1D1C6CD520ACA06A00718C76 /* ISOThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOThread.swift; sourceTree = "<group>"; };
 		1D1C6CD720ACAEE600718C76 /* UNThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNThread.swift; sourceTree = "<group>"; };
 		1D5237F71FE9954A00B284A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D69197120B02DB800AF827F /* Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fraction.swift; sourceTree = "<group>"; };
 		1D69197320B05BFD00AF827F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1D69197520B05DEB00AF827F /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		1D69197720B0816D00AF827F /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewInterface.storyboard; sourceTree = "<group>"; };
 		1D87306A2094FAE20084EB20 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		1DC7F9531FCCB78400E4237C /* ThreadChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,10 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				1D1C6CD120AC950D00718C76 /* ThreadProtocol.swift */,
-				1D1C6CD320AC98E700718C76 /* Tolerances.swift */,
+				1D1C6CD320AC98E700718C76 /* TolerancesAndUnits.swift */,
 				1D1C6CD520ACA06A00718C76 /* ISOThread.swift */,
 				1D1C6CD720ACAEE600718C76 /* UNThread.swift */,
 				1D69197120B02DB800AF827F /* Fraction.swift */,
+				1D69197720B0816D00AF827F /* NumberFormatter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -127,7 +128,6 @@
 				1D14C6F620AF626F007E5A75 /* UNFractionInputView.swift */,
 				1D14C6F820AF6283007E5A75 /* UNNumberInputView.swift */,
 				1D14C6FA20AF629A007E5A75 /* UNDecimalInputView.swift */,
-				1D14C6FC20AF62CE007E5A75 /* ISOInputView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -220,9 +220,9 @@
 				1D69197620B05DEB00AF827F /* ViewExtension.swift in Sources */,
 				1D1C6CD220AC950D00718C76 /* ThreadProtocol.swift in Sources */,
 				1D14C6F320AF09B3007E5A75 /* MenuViewController.swift in Sources */,
+				1D69197820B0816D00AF827F /* NumberFormatter.swift in Sources */,
 				1DFD33721FFAD0A900A062BA /* ISOViewController.swift in Sources */,
-				1D14C6FD20AF62CE007E5A75 /* ISOInputView.swift in Sources */,
-				1D1C6CD420AC98E700718C76 /* Tolerances.swift in Sources */,
+				1D1C6CD420AC98E700718C76 /* TolerancesAndUnits.swift in Sources */,
 				1D87306B2094FAE20084EB20 /* HelpViewController.swift in Sources */,
 				1D14C6F920AF6283007E5A75 /* UNNumberInputView.swift in Sources */,
 				1DCC979C209A2D2300F576F1 /* HelpButton.swift in Sources */,

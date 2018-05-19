@@ -20,16 +20,9 @@ struct ISOThread: ISOThreadProtocol{
     var maxPitchDiameter: Double
     var minPitchDiameter: Double
     var taphole: Double?
+    var units: Units
     
-    init(diameter: Double, pitch: Double, isInternal: Bool, inTolerance:ISOTolerances, outTolerance:ISOTolerances) {
-        numberFormatter = {
-            let nf = NumberFormatter()
-            nf.numberStyle = .decimal
-            nf.maximumFractionDigits = 3
-            nf.minimumFractionDigits = 3
-            nf.decimalSeparator = Locale.current.decimalSeparator
-            return nf
-        }()
+    init(diameter: Double, pitch: Double, isInternal: Bool, inTolerance:ISOTolerances, outTolerance:ISOTolerances, units:Units) {
         
         let es:Double = {
             switch outTolerance {
@@ -89,15 +82,28 @@ struct ISOThread: ISOThreadProtocol{
         
         let maxMinorDiameter = { return isInternal ? minMinorDiameter + td1 : basicMinorDiam - H/2 + 2*Cmax + es - td2 }()
         
-        self.taphole = taphole
-        self.maxMajorDiameter = maxMajorDiameter
-        self.minMajorDiameter = minMajorDiameter
-        self.maxPitchDiameter = maxPitchDiameter
-        self.minPitchDiameter = minPitchDiameter
-        self.maxMinorDiameter = maxMinorDiameter
-        self.minMinorDiameter = minMinorDiameter
+
         self.outTolerance = outTolerance
         self.inTolerance = inTolerance
+        self.units = units
+        self.numberFormatter = getNumberFormatter(for: units)
+        if units == .mm {
+            self.taphole = taphole
+            self.maxMajorDiameter = maxMajorDiameter
+            self.minMajorDiameter = minMajorDiameter
+            self.maxPitchDiameter = maxPitchDiameter
+            self.minPitchDiameter = minPitchDiameter
+            self.maxMinorDiameter = maxMinorDiameter
+            self.minMinorDiameter = minMinorDiameter
+        }else{
+            if taphole != nil { self.taphole = taphole! / 25.4 }
+            self.maxMajorDiameter = maxMajorDiameter / 25.4
+            self.minMajorDiameter = minMajorDiameter / 25.4
+            self.maxPitchDiameter = maxPitchDiameter / 25.4
+            self.minPitchDiameter = minPitchDiameter / 25.4
+            self.maxMinorDiameter = maxMinorDiameter / 25.4
+            self.minMinorDiameter = minMinorDiameter / 25.4
+        }
     }
 }
 

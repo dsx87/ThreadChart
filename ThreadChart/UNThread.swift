@@ -19,17 +19,10 @@ struct UNThread: UNThreadProtocol {
     var maxPitchDiameter: Double
     var minPitchDiameter: Double
     var taphole: Double?
+    var units: Units
     
-    
-    init(diameter: Double, TPI: Double, isInternal: Bool, tolerance: UNTolerances) {
-        numberFormatter = {
-            let nf = NumberFormatter()
-            nf.numberStyle = .decimal
-            nf.maximumFractionDigits = 4
-            nf.minimumFractionDigits = 4
-            nf.decimalSeparator = Locale.current.decimalSeparator
-            return nf
-        }()
+    init(diameter: Double, TPI: Double, isInternal: Bool, tolerance: UNTolerances, units:Units) {
+
         
         
         let pitch:Double = 1.0/Double(TPI)
@@ -126,14 +119,28 @@ struct UNThread: UNThreadProtocol {
         
         let minMinorDiameter:Double = { return isInternal ? basicMinorDiameter : 0.0 }()
         
-        self.maxMajorDiameter = maxMajorDiameter
-        self.minMajorDiameter = minMajorDiameter
-        self.maxPitchDiameter = maxPitchDiameter
-        self.minPitchDiameter = minPitchDiameter
-        self.maxMinorDiameter = maxMinorDiameter
-        self.minMinorDiameter = minMinorDiameter
+
         self.tolerance = tolerance
-        self.taphole = tapHole
+        self.units = units
+        self.numberFormatter = getNumberFormatter(for: units)
+        if units == .inch {
+            self.maxMajorDiameter = maxMajorDiameter
+            self.minMajorDiameter = minMajorDiameter
+            self.maxPitchDiameter = maxPitchDiameter
+            self.minPitchDiameter = minPitchDiameter
+            self.maxMinorDiameter = maxMinorDiameter
+            self.minMinorDiameter = minMinorDiameter
+            self.taphole = tapHole
+        } else {
+            self.maxMajorDiameter = maxMajorDiameter * 25.4
+            self.minMajorDiameter = minMajorDiameter * 25.4
+            self.maxPitchDiameter = maxPitchDiameter * 25.4
+            self.minPitchDiameter = minPitchDiameter * 25.4
+            self.maxMinorDiameter = maxMinorDiameter * 25.4
+            self.minMinorDiameter = minMinorDiameter * 25.4
+            if tapHole != nil { self.taphole = tapHole! * 25.4 }
+            
+        }
         
     }
 }

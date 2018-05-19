@@ -12,10 +12,16 @@ struct Fraction {
     let numerator:Double
     let denominator:Double
     let decimalValue:Double
-    
-    init(numerator:Double, denominator:Double) {
+    let wholeValue:Double
+    init?(numerator:Double, denominator:Double, wholeValue:Double) {
         self.numerator = numerator
         self.denominator = denominator
-        decimalValue = numerator / denominator
+        self.wholeValue = wholeValue
+        if denominator != 0{
+            decimalValue = wholeValue + (numerator / denominator)
+        }else{
+            return nil
+        }
+        
     }
 }

@@ -9,26 +9,21 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        /*guard let splitController = window?.rootViewController as? UISplitViewController,
-        let mainNavigationController = splitController.viewControllers.first as? UINavigationController,
-        let menuController = mainNavigationController.topViewController as? MenuViewController,
-        let detailNavigationController = splitController.viewControllers.last as? UINavigationController,
-        let threadController = detailNavigationController.topViewController as? ISOViewController
-            else {
-            fatalError()
-        }
-        */
-        
-        
+        guard let splitController = window?.rootViewController as? UISplitViewController else { return true }
+        splitController.delegate = self
+        splitController.preferredDisplayMode = .allVisible
+
         return true
     }
 
-    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true
+    }
 
 }
 

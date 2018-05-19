@@ -18,4 +18,6 @@ enum UNTolerances {
     case one, two, three
 }
 
-
+enum Units {
+    case mm, inch
+}

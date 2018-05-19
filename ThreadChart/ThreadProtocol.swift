@@ -18,6 +18,7 @@ protocol ThreadProtocol {
     var maxPitchDiameter:Double { get }
     var minPitchDiameter:Double { get }
     var taphole:Double? { get }
+    var units:Units { get }
     
     var numberFormatter:NumberFormatter { get }
 }
@@ -26,11 +27,12 @@ protocol ISOThreadProtocol: ThreadProtocol {
     var inTolerance:ISOTolerances { get }
     var outTolerance:ISOTolerances { get }
     
-    init(diameter:Double, pitch:Double, isInternal:Bool, inTolerance:ISOTolerances, outTolerance:ISOTolerances)
+    init(diameter:Double, pitch:Double, isInternal:Bool, inTolerance:ISOTolerances, outTolerance:ISOTolerances, units:Units)
 }
 
 protocol UNThreadProtocol: ThreadProtocol {
     var tolerance:UNTolerances { get }
     
-    init(diameter:Double, TPI:Double, isInternal:Bool, tolerance:UNTolerances)
+    init(diameter:Double, TPI:Double, isInternal:Bool, tolerance:UNTolerances, units:Units)
 }
+

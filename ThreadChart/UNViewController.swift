@@ -27,11 +27,11 @@ class UNViewController: ThreadChartViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.navigationBar.barTintColor = view.backgroundColor
     }
     
     @objc func setUI(){
+        clearLabels()
         activeView?.resignFirstResponderFromSubviews()
         activeView?.unsetTextFieldsDelegate()
         switch inputSwitch.selectedSegmentIndex {
@@ -56,7 +56,7 @@ class UNViewController: ThreadChartViewController {
         activeView?.setTextFieldsDelegate(to: self)
     }
     
-    @objc func getParametersAndCalculate() {
+    @objc override func getParametersAndCalculate() {
         isInternal = {
             switch inOutSwitch.selectedSegmentIndex{
             case 0:
@@ -70,24 +70,29 @@ class UNViewController: ThreadChartViewController {
         
         
         if let view = activeView as? UNDecimalInputView{
-            diameter = view.diameter.text!.doubleValue
-            pitch = view.TPI.text!.doubleValue
+            guard let diameter = view.diameter.text?.doubleValue,
+                let pitch = view.TPI.text!.doubleValue else { clearLabels(); return }
+            self.diameter = diameter
+            self.pitch = pitch
         }
         
         if let view = activeView as? UNNumberInputView {
+            guard let enteredNumber = view.number.text?.doubleValue else { clearLabels(); return }
             let base = 0.06
-            let enteredNumber = view.number.text!.doubleValue
-            if enteredNumber > 12 { return }
+            if enteredNumber > 12.0 { return }
             diameter = base + (0.013 * enteredNumber)
             pitch = view.TPI.text!.doubleValue
         }
         
         if let view = activeView as? UNFractionInputView {
-            let whole = view.wholePart.text!.doubleValue
-            let num = view.nominator.text!.doubleValue
-            let denom = view.denominator.text!.doubleValue
-            diameter = Fraction(numerator: num, denominator: denom).decimalValue + whole
-            pitch = view.TPI.text!.doubleValue
+            guard let whole = view.wholePart.text?.doubleValue,
+                let num = view.nominator.text?.doubleValue,
+                let denom = view.denominator.text?.doubleValue,
+                let pitch = view.TPI.text?.doubleValue,
+                let diameter = Fraction(numerator: num, denominator: denom, wholeValue: whole)?.decimalValue
+                else { clearLabels(); return }
+            self.diameter = diameter
+            self.pitch = pitch
         }
         
         calculateThread()
