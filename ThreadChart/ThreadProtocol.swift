@@ -8,6 +8,7 @@
 
 import Foundation
 
+let cubeRoot:(Double) -> Double = {x in Double(pow(x, 1/3))}
 
 protocol ThreadProtocol {
     var maxMajorDiameter:Double { get }
@@ -17,6 +18,8 @@ protocol ThreadProtocol {
     var maxPitchDiameter:Double { get }
     var minPitchDiameter:Double { get }
     var taphole:Double? { get }
+    
+    var numberFormatter:NumberFormatter { get }
 }
 
 protocol ISOThreadProtocol: ThreadProtocol {
@@ -29,5 +32,5 @@ protocol ISOThreadProtocol: ThreadProtocol {
 protocol UNThreadProtocol: ThreadProtocol {
     var tolerance:UNTolerances { get }
     
-    init(diameter:Double, TPI:Int, isInternal:Bool, tolerance:UNTolerances)
+    init(diameter:Double, TPI:Double, isInternal:Bool, tolerance:UNTolerances)
 }

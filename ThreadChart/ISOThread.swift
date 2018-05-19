@@ -10,6 +10,7 @@ import Foundation
 
 
 struct ISOThread: ISOThreadProtocol{
+    var numberFormatter: NumberFormatter
     var inTolerance: ISOTolerances
     var outTolerance:ISOTolerances
     var maxMajorDiameter: Double
@@ -21,6 +22,15 @@ struct ISOThread: ISOThreadProtocol{
     var taphole: Double?
     
     init(diameter: Double, pitch: Double, isInternal: Bool, inTolerance:ISOTolerances, outTolerance:ISOTolerances) {
+        numberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.maximumFractionDigits = 3
+            nf.minimumFractionDigits = 3
+            nf.decimalSeparator = Locale.current.decimalSeparator
+            return nf
+        }()
+        
         let es:Double = {
             switch outTolerance {
             case .d: return (-(80 + 11*pitch)) / 1000

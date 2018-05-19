@@ -10,24 +10,27 @@ import Foundation
 
 
 struct UNThread: UNThreadProtocol {
+    var numberFormatter: NumberFormatter
     var tolerance: UNTolerances
-    
     var maxMajorDiameter: Double
-    
     var minMajorDiameter: Double
-    
     var maxMinorDiameter: Double
-    
     var minMinorDiameter: Double
-    
     var maxPitchDiameter: Double
-    
     var minPitchDiameter: Double
-    
     var taphole: Double?
     
     
-    init(diameter: Double, TPI: Int, isInternal: Bool, tolerance: UNTolerances) {
+    init(diameter: Double, TPI: Double, isInternal: Bool, tolerance: UNTolerances) {
+        numberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.maximumFractionDigits = 4
+            nf.minimumFractionDigits = 4
+            nf.decimalSeparator = Locale.current.decimalSeparator
+            return nf
+        }()
+        
         
         let pitch:Double = 1.0/Double(TPI)
         

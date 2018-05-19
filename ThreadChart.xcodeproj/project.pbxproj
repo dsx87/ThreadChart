@@ -7,43 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D14C6F320AF09B3007E5A75 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6F220AF09B3007E5A75 /* MenuViewController.swift */; };
+		1D14C6F720AF626F007E5A75 /* UNFractionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6F620AF626F007E5A75 /* UNFractionInputView.swift */; };
+		1D14C6F920AF6283007E5A75 /* UNNumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6F820AF6283007E5A75 /* UNNumberInputView.swift */; };
+		1D14C6FB20AF629A007E5A75 /* UNDecimalInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6FA20AF629A007E5A75 /* UNDecimalInputView.swift */; };
+		1D14C6FD20AF62CE007E5A75 /* ISOInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14C6FC20AF62CE007E5A75 /* ISOInputView.swift */; };
 		1D1C6CD220AC950D00718C76 /* ThreadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD120AC950D00718C76 /* ThreadProtocol.swift */; };
 		1D1C6CD420AC98E700718C76 /* Tolerances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD320AC98E700718C76 /* Tolerances.swift */; };
 		1D1C6CD620ACA06A00718C76 /* ISOThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD520ACA06A00718C76 /* ISOThread.swift */; };
 		1D1C6CD820ACAEE600718C76 /* UNThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD720ACAEE600718C76 /* UNThread.swift */; };
 		1D5237F81FE9954A00B284A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5237F71FE9954A00B284A9 /* LaunchScreen.storyboard */; };
+		1D69197220B02DB800AF827F /* Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197120B02DB800AF827F /* Fraction.swift */; };
+		1D69197420B05BFD00AF827F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197320B05BFD00AF827F /* StringExtension.swift */; };
+		1D69197620B05DEB00AF827F /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197520B05DEB00AF827F /* ViewExtension.swift */; };
 		1D7603F01FF6B7BA008B914D /* NewInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */; };
 		1D87306B2094FAE20084EB20 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D87306A2094FAE20084EB20 /* HelpViewController.swift */; };
-		1DA0827D1FD1AE63004333FD /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0827C1FD1AE63004333FD /* Thread.swift */; };
 		1DC7F9571FCCB78400E4237C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F9561FCCB78400E4237C /* AppDelegate.swift */; };
 		1DC7F95E1FCCB78400E4237C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7F95D1FCCB78400E4237C /* Assets.xcassets */; };
 		1DCC979C209A2D2300F576F1 /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC979B209A2D2300F576F1 /* HelpButton.swift */; };
-		1DF5CA171FF6EBD100A5E5A4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5CA161FF6EBD100A5E5A4 /* SWRevealViewController.m */; };
 		1DF5CA1B1FF6F0E100A5E5A4 /* UNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */; };
-		1DF9C49B1FDC454B00201F09 /* Thread_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9C49A1FDC454B00201F09 /* Thread_types.swift */; };
 		1DFD336E1FFACD9000A062BA /* ThreadChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD336D1FFACD9000A062BA /* ThreadChartViewController.swift */; };
 		1DFD33721FFAD0A900A062BA /* ISOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD33711FFAD0A900A062BA /* ISOViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D14C6F220AF09B3007E5A75 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1D14C6F620AF626F007E5A75 /* UNFractionInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNFractionInputView.swift; sourceTree = "<group>"; };
+		1D14C6F820AF6283007E5A75 /* UNNumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNumberInputView.swift; sourceTree = "<group>"; };
+		1D14C6FA20AF629A007E5A75 /* UNDecimalInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNDecimalInputView.swift; sourceTree = "<group>"; };
+		1D14C6FC20AF62CE007E5A75 /* ISOInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOInputView.swift; sourceTree = "<group>"; };
 		1D1C6CD120AC950D00718C76 /* ThreadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadProtocol.swift; sourceTree = "<group>"; };
 		1D1C6CD320AC98E700718C76 /* Tolerances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tolerances.swift; sourceTree = "<group>"; };
 		1D1C6CD520ACA06A00718C76 /* ISOThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOThread.swift; sourceTree = "<group>"; };
 		1D1C6CD720ACAEE600718C76 /* UNThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNThread.swift; sourceTree = "<group>"; };
 		1D5237F71FE9954A00B284A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D69197120B02DB800AF827F /* Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fraction.swift; sourceTree = "<group>"; };
+		1D69197320B05BFD00AF827F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1D69197520B05DEB00AF827F /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewInterface.storyboard; sourceTree = "<group>"; };
 		1D87306A2094FAE20084EB20 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		1DA0827C1FD1AE63004333FD /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		1DC7F9531FCCB78400E4237C /* ThreadChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC7F9561FCCB78400E4237C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC7F95D1FCCB78400E4237C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC7F9621FCCB78400E4237C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DCC979B209A2D2300F576F1 /* HelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButton.swift; sourceTree = "<group>"; };
-		1DF5CA141FF6EBD000A5E5A4 /* ThreadChart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThreadChart-Bridging-Header.h"; sourceTree = "<group>"; };
-		1DF5CA151FF6EBD000A5E5A4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		1DF5CA161FF6EBD100A5E5A4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNViewController.swift; sourceTree = "<group>"; };
-		1DF9C49A1FDC454B00201F09 /* Thread_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread_types.swift; sourceTree = "<group>"; };
 		1DFD336D1FFACD9000A062BA /* ThreadChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadChartViewController.swift; sourceTree = "<group>"; };
 		1DFD33711FFAD0A900A062BA /* ISOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,25 +67,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D5238041FE99FF300B284A9 /* ThreadCalulation */ = {
+		1D5238041FE99FF300B284A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1DA0827C1FD1AE63004333FD /* Thread.swift */,
-				1DF9C49A1FDC454B00201F09 /* Thread_types.swift */,
 				1D1C6CD120AC950D00718C76 /* ThreadProtocol.swift */,
 				1D1C6CD320AC98E700718C76 /* Tolerances.swift */,
 				1D1C6CD520ACA06A00718C76 /* ISOThread.swift */,
 				1D1C6CD720ACAEE600718C76 /* UNThread.swift */,
+				1D69197120B02DB800AF827F /* Fraction.swift */,
 			);
-			name = ThreadCalulation;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		1D5238061FE9A02400B284A9 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				1DC7F9561FCCB78400E4237C /* AppDelegate.swift */,
 				1DC7F95D1FCCB78400E4237C /* Assets.xcassets */,
 				1DC7F9621FCCB78400E4237C /* Info.plist */,
 				1D5237F71FE9954A00B284A9 /* LaunchScreen.storyboard */,
+				1D69197320B05BFD00AF827F /* StringExtension.swift */,
+				1D69197520B05DEB00AF827F /* ViewExtension.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -101,35 +111,25 @@
 		1DC7F9551FCCB78400E4237C /* ThreadChart */ = {
 			isa = PBXGroup;
 			children = (
-				1DCC979A209A2D0300F576F1 /* views */,
-				1DF5CA131FF6EBB400A5E5A4 /* RevealViewController */,
-				1DC7F9561FCCB78400E4237C /* AppDelegate.swift */,
-				1D5238041FE99FF300B284A9 /* ThreadCalulation */,
+				1DCC979A209A2D0300F576F1 /* Views */,
+				1D5238041FE99FF300B284A9 /* Models */,
 				1DF5CA1D1FF6F10200A5E5A4 /* ViewControllers */,
 				1D5238061FE9A02400B284A9 /* Support */,
-				1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */,
-				1DFD33711FFAD0A900A062BA /* ISOViewController.swift */,
 				1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */,
 			);
 			path = ThreadChart;
 			sourceTree = "<group>";
 		};
-		1DCC979A209A2D0300F576F1 /* views */ = {
+		1DCC979A209A2D0300F576F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				1DCC979B209A2D2300F576F1 /* HelpButton.swift */,
+				1D14C6F620AF626F007E5A75 /* UNFractionInputView.swift */,
+				1D14C6F820AF6283007E5A75 /* UNNumberInputView.swift */,
+				1D14C6FA20AF629A007E5A75 /* UNDecimalInputView.swift */,
+				1D14C6FC20AF62CE007E5A75 /* ISOInputView.swift */,
 			);
-			name = views;
-			sourceTree = "<group>";
-		};
-		1DF5CA131FF6EBB400A5E5A4 /* RevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1DF5CA151FF6EBD000A5E5A4 /* SWRevealViewController.h */,
-				1DF5CA161FF6EBD100A5E5A4 /* SWRevealViewController.m */,
-				1DF5CA141FF6EBD000A5E5A4 /* ThreadChart-Bridging-Header.h */,
-			);
-			name = RevealViewController;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		1DF5CA1D1FF6F10200A5E5A4 /* ViewControllers */ = {
@@ -137,6 +137,9 @@
 			children = (
 				1DFD336D1FFACD9000A062BA /* ThreadChartViewController.swift */,
 				1D87306A2094FAE20084EB20 /* HelpViewController.swift */,
+				1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */,
+				1DFD33711FFAD0A900A062BA /* ISOViewController.swift */,
+				1D14C6F220AF09B3007E5A75 /* MenuViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -214,19 +217,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DA0827D1FD1AE63004333FD /* Thread.swift in Sources */,
+				1D69197620B05DEB00AF827F /* ViewExtension.swift in Sources */,
 				1D1C6CD220AC950D00718C76 /* ThreadProtocol.swift in Sources */,
-				1DF9C49B1FDC454B00201F09 /* Thread_types.swift in Sources */,
+				1D14C6F320AF09B3007E5A75 /* MenuViewController.swift in Sources */,
 				1DFD33721FFAD0A900A062BA /* ISOViewController.swift in Sources */,
+				1D14C6FD20AF62CE007E5A75 /* ISOInputView.swift in Sources */,
 				1D1C6CD420AC98E700718C76 /* Tolerances.swift in Sources */,
 				1D87306B2094FAE20084EB20 /* HelpViewController.swift in Sources */,
+				1D14C6F920AF6283007E5A75 /* UNNumberInputView.swift in Sources */,
 				1DCC979C209A2D2300F576F1 /* HelpButton.swift in Sources */,
+				1D69197420B05BFD00AF827F /* StringExtension.swift in Sources */,
 				1DFD336E1FFACD9000A062BA /* ThreadChartViewController.swift in Sources */,
-				1DF5CA171FF6EBD100A5E5A4 /* SWRevealViewController.m in Sources */,
+				1D14C6F720AF626F007E5A75 /* UNFractionInputView.swift in Sources */,
 				1D1C6CD620ACA06A00718C76 /* ISOThread.swift in Sources */,
 				1D1C6CD820ACAEE600718C76 /* UNThread.swift in Sources */,
 				1DC7F9571FCCB78400E4237C /* AppDelegate.swift in Sources */,
 				1DF5CA1B1FF6F0E100A5E5A4 /* UNViewController.swift in Sources */,
+				1D14C6FB20AF629A007E5A75 /* UNDecimalInputView.swift in Sources */,
+				1D69197220B02DB800AF827F /* Fraction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +296,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -339,6 +348,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -349,21 +359,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FCLYBXX3KC;
 				INFOPLIST_FILE = ThreadChart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ip.threadChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0c286756-72dc-409b-aa8a-177eff64516b";
-				PROVISIONING_PROFILE_SPECIFIER = ThreadChart;
-				SWIFT_OBJC_BRIDGING_HEADER = "ThreadChart/ThreadChart-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -372,21 +383,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Igor Pivnyk (FCLYBXX3KC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Igor Pivnyk (FCLYBXX3KC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FCLYBXX3KC;
 				INFOPLIST_FILE = ThreadChart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ip.threadChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0c286756-72dc-409b-aa8a-177eff64516b";
-				PROVISIONING_PROFILE_SPECIFIER = ThreadChart;
-				SWIFT_OBJC_BRIDGING_HEADER = "ThreadChart/ThreadChart-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
