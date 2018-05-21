@@ -13,21 +13,20 @@ class UNViewController: ThreadChartViewController {
     @IBOutlet weak var fractionView: UNFractionInputView!
     @IBOutlet weak var decimalView: UNDecimalInputView!
     @IBOutlet weak var inputSwitch: UISegmentedControl!
-    @IBOutlet weak var inOutSwitch: UISegmentedControl!
     
     var activeView:UIView?
-
+    var diameter:Double?
+    var pitch:Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activeView = fractionView
         inputSwitch.addTarget(self, action: #selector(setUI), for: .valueChanged)
-        inOutSwitch.addTarget(self, action: #selector(getParametersAndCalculate), for: .valueChanged)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barTintColor = view.backgroundColor
+        navigationController?.navigationBar.barTintColor = (view as! ViewControllerView).setUNView()
     }
     
     @objc func setUI(){
@@ -90,13 +89,19 @@ class UNViewController: ThreadChartViewController {
                 let num = view.nominator.text?.doubleValue,
                 let denom = view.denominator.text?.doubleValue,
                 let pitch = view.TPI.text?.doubleValue,
-                let diameter = Fraction(numerator: num, denominator: denom, wholeValue: whole)?.decimalValue
+                let diameter = Fraction(numerator: Int(num), denominator: Int(denom), wholeValue: Int(whole))?.decimalValue
                 else { clearLabels(); return }
             self.diameter = diameter
             self.pitch = pitch
         }
         
-        calculateThread()
+        guard let diameter = self.diameter else { clearLabels(); return }
+        guard let pitch = self.pitch else { clearLabels(); return }
+        
+        thread = UNThread(diameter: diameter, TPI: pitch, isInternal: isInternal, tolerance: .two, units: units)
+        showCalculationResults()
+        self.diameter = nil
+        self.pitch = nil
     }
     
     

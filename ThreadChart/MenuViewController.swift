@@ -9,22 +9,29 @@
 import UIKit
 
 class MenuViewController: UITableViewController {
-
+    
     let ISOvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "ISO")
     let UNvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "UN")
+    let BSPPvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "BSPP")
     
     let threads = [["title":"ISO",
                     "description":"M/MF 60º"],
                    ["title":"UN",
-                    "description":"C/F/S/EF 60º"
+                    "description":"C/F/S/EF 60º"],
+                   ["title":"BSPP",
+                    "description":"55º"]
                     ]
-                    ]
+    
+    
     var cellColors = [UIColor]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = UIColor.white
-        cellColors.append(ISOvc.view.backgroundColor!)
-        cellColors.append(UNvc.view.backgroundColor!)
+        cellColors.append((ISOvc.view as! ViewControllerView).setISOView())
+        cellColors.append((UNvc.view as! ViewControllerView).setUNView())
+        cellColors.append((UNvc.view as! ViewControllerView).setBSPPView())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,8 +79,10 @@ class MenuViewController: UITableViewController {
         
         if thread["title"] == "ISO"{
             splitViewController?.showDetailViewController(ISOvc, sender: nil)
-        }else{
+        }else if thread["title"] == "UN"{
             splitViewController?.showDetailViewController(UNvc, sender: nil)
+        }else if thread["title"] == "BSPP"{
+            splitViewController?.showDetailViewController(BSPPvc, sender: nil)
         }
     }
 

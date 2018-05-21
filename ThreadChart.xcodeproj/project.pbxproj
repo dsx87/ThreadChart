@@ -15,6 +15,10 @@
 		1D1C6CD420AC98E700718C76 /* TolerancesAndUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD320AC98E700718C76 /* TolerancesAndUnits.swift */; };
 		1D1C6CD620ACA06A00718C76 /* ISOThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD520ACA06A00718C76 /* ISOThread.swift */; };
 		1D1C6CD820ACAEE600718C76 /* UNThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C6CD720ACAEE600718C76 /* UNThread.swift */; };
+		1D1D705920B1AE5C00A82F35 /* BSPPThreadsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D705820B1AE5C00A82F35 /* BSPPThreadsDatabase.swift */; };
+		1D1D706120B1BFF000A82F35 /* BSPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D706020B1BFF000A82F35 /* BSPPTests.swift */; };
+		1D1D706920B1D97D00A82F35 /* ViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D706820B1D97D00A82F35 /* ViewControllerView.swift */; };
+		1D1D706B20B1E21100A82F35 /* BSPPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D706A20B1E21100A82F35 /* BSPPViewController.swift */; };
 		1D5237F81FE9954A00B284A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5237F71FE9954A00B284A9 /* LaunchScreen.storyboard */; };
 		1D69197220B02DB800AF827F /* Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197120B02DB800AF827F /* Fraction.swift */; };
 		1D69197420B05BFD00AF827F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69197320B05BFD00AF827F /* StringExtension.swift */; };
@@ -23,10 +27,21 @@
 		1D7603F01FF6B7BA008B914D /* NewInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7603EF1FF6B7BA008B914D /* NewInterface.storyboard */; };
 		1DC7F9571FCCB78400E4237C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7F9561FCCB78400E4237C /* AppDelegate.swift */; };
 		1DC7F95E1FCCB78400E4237C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7F95D1FCCB78400E4237C /* Assets.xcassets */; };
+		1DE5884B20B0A65E005680B3 /* BSPPThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5884A20B0A65E005680B3 /* BSPPThread.swift */; };
 		1DF5CA1B1FF6F0E100A5E5A4 /* UNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */; };
 		1DFD336E1FFACD9000A062BA /* ThreadChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD336D1FFACD9000A062BA /* ThreadChartViewController.swift */; };
 		1DFD33721FFAD0A900A062BA /* ISOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD33711FFAD0A900A062BA /* ISOViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D1D706320B1BFF000A82F35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DC7F94B1FCCB78400E4237C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC7F9521FCCB78400E4237C;
+			remoteInfo = ThreadChart;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D14C6F220AF09B3007E5A75 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +52,12 @@
 		1D1C6CD320AC98E700718C76 /* TolerancesAndUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TolerancesAndUnits.swift; sourceTree = "<group>"; };
 		1D1C6CD520ACA06A00718C76 /* ISOThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOThread.swift; sourceTree = "<group>"; };
 		1D1C6CD720ACAEE600718C76 /* UNThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNThread.swift; sourceTree = "<group>"; };
+		1D1D705820B1AE5C00A82F35 /* BSPPThreadsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPPThreadsDatabase.swift; sourceTree = "<group>"; };
+		1D1D705E20B1BFF000A82F35 /* BSPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D1D706020B1BFF000A82F35 /* BSPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPPTests.swift; sourceTree = "<group>"; };
+		1D1D706220B1BFF000A82F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D1D706820B1D97D00A82F35 /* ViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerView.swift; sourceTree = "<group>"; };
+		1D1D706A20B1E21100A82F35 /* BSPPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPPViewController.swift; sourceTree = "<group>"; };
 		1D5237F71FE9954A00B284A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D69197120B02DB800AF827F /* Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fraction.swift; sourceTree = "<group>"; };
 		1D69197320B05BFD00AF827F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -47,12 +68,20 @@
 		1DC7F9561FCCB78400E4237C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC7F95D1FCCB78400E4237C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC7F9621FCCB78400E4237C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DE5884A20B0A65E005680B3 /* BSPPThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPPThread.swift; sourceTree = "<group>"; };
 		1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNViewController.swift; sourceTree = "<group>"; };
 		1DFD336D1FFACD9000A062BA /* ThreadChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadChartViewController.swift; sourceTree = "<group>"; };
 		1DFD33711FFAD0A900A062BA /* ISOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1D1D705B20B1BFF000A82F35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DC7F9501FCCB78400E4237C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D1D705F20B1BFF000A82F35 /* BSPPTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D1D706020B1BFF000A82F35 /* BSPPTests.swift */,
+				1D1D706220B1BFF000A82F35 /* Info.plist */,
+			);
+			path = BSPPTests;
+			sourceTree = "<group>";
+		};
 		1D5238041FE99FF300B284A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +110,8 @@
 				1D1C6CD720ACAEE600718C76 /* UNThread.swift */,
 				1D69197120B02DB800AF827F /* Fraction.swift */,
 				1D69197720B0816D00AF827F /* NumberFormatter.swift */,
+				1DE5884A20B0A65E005680B3 /* BSPPThread.swift */,
+				1D1D705820B1AE5C00A82F35 /* BSPPThreadsDatabase.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -93,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				1DC7F9551FCCB78400E4237C /* ThreadChart */,
+				1D1D705F20B1BFF000A82F35 /* BSPPTests */,
 				1DC7F9541FCCB78400E4237C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				1DC7F9531FCCB78400E4237C /* ThreadChart.app */,
+				1D1D705E20B1BFF000A82F35 /* BSPPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +165,7 @@
 				1D14C6F620AF626F007E5A75 /* UNFractionInputView.swift */,
 				1D14C6F820AF6283007E5A75 /* UNNumberInputView.swift */,
 				1D14C6FA20AF629A007E5A75 /* UNDecimalInputView.swift */,
+				1D1D706820B1D97D00A82F35 /* ViewControllerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -134,6 +177,7 @@
 				1DF5CA1A1FF6F0E100A5E5A4 /* UNViewController.swift */,
 				1DFD33711FFAD0A900A062BA /* ISOViewController.swift */,
 				1D14C6F220AF09B3007E5A75 /* MenuViewController.swift */,
+				1D1D706A20B1E21100A82F35 /* BSPPViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -141,6 +185,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1D1D705D20B1BFF000A82F35 /* BSPPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D1D706520B1BFF000A82F35 /* Build configuration list for PBXNativeTarget "BSPPTests" */;
+			buildPhases = (
+				1D1D705A20B1BFF000A82F35 /* Sources */,
+				1D1D705B20B1BFF000A82F35 /* Frameworks */,
+				1D1D705C20B1BFF000A82F35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D1D706420B1BFF000A82F35 /* PBXTargetDependency */,
+			);
+			name = BSPPTests;
+			productName = BSPPTests;
+			productReference = 1D1D705E20B1BFF000A82F35 /* BSPPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1DC7F9521FCCB78400E4237C /* ThreadChart */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DC7F9651FCCB78400E4237C /* Build configuration list for PBXNativeTarget "ThreadChart" */;
@@ -164,10 +226,15 @@
 		1DC7F94B1FCCB78400E4237C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Igor Pivnyk";
 				TargetAttributes = {
+					1D1D705D20B1BFF000A82F35 = {
+						CreatedOnToolsVersion = 9.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1DC7F9521FCCB78400E4237C;
+					};
 					1DC7F9521FCCB78400E4237C = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0930;
@@ -189,11 +256,19 @@
 			projectRoot = "";
 			targets = (
 				1DC7F9521FCCB78400E4237C /* ThreadChart */,
+				1D1D705D20B1BFF000A82F35 /* BSPPTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1D1D705C20B1BFF000A82F35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DC7F9511FCCB78400E4237C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +282,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D1D705A20B1BFF000A82F35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D1D706120B1BFF000A82F35 /* BSPPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DC7F94F1FCCB78400E4237C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,8 +301,11 @@
 				1DFD33721FFAD0A900A062BA /* ISOViewController.swift in Sources */,
 				1D1C6CD420AC98E700718C76 /* TolerancesAndUnits.swift in Sources */,
 				1D14C6F920AF6283007E5A75 /* UNNumberInputView.swift in Sources */,
+				1D1D706920B1D97D00A82F35 /* ViewControllerView.swift in Sources */,
 				1D69197420B05BFD00AF827F /* StringExtension.swift in Sources */,
+				1D1D705920B1AE5C00A82F35 /* BSPPThreadsDatabase.swift in Sources */,
 				1DFD336E1FFACD9000A062BA /* ThreadChartViewController.swift in Sources */,
+				1D1D706B20B1E21100A82F35 /* BSPPViewController.swift in Sources */,
 				1D14C6F720AF626F007E5A75 /* UNFractionInputView.swift in Sources */,
 				1D1C6CD620ACA06A00718C76 /* ISOThread.swift in Sources */,
 				1D1C6CD820ACAEE600718C76 /* UNThread.swift in Sources */,
@@ -227,12 +313,57 @@
 				1DF5CA1B1FF6F0E100A5E5A4 /* UNViewController.swift in Sources */,
 				1D14C6FB20AF629A007E5A75 /* UNDecimalInputView.swift in Sources */,
 				1D69197220B02DB800AF827F /* Fraction.swift in Sources */,
+				1DE5884B20B0A65E005680B3 /* BSPPThread.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1D1D706420B1BFF000A82F35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC7F9521FCCB78400E4237C /* ThreadChart */;
+			targetProxy = 1D1D706320B1BFF000A82F35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1D1D706620B1BFF000A82F35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FCLYBXX3KC;
+				INFOPLIST_FILE = BSPPTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = comp.BSPPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreadChart.app/ThreadChart";
+			};
+			name = Debug;
+		};
+		1D1D706720B1BFF000A82F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FCLYBXX3KC;
+				INFOPLIST_FILE = BSPPTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = comp.BSPPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreadChart.app/ThreadChart";
+			};
+			name = Release;
+		};
 		1DC7F9631FCCB78400E4237C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,6 +527,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D1D706520B1BFF000A82F35 /* Build configuration list for PBXNativeTarget "BSPPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D1D706620B1BFF000A82F35 /* Debug */,
+				1D1D706720B1BFF000A82F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DC7F94E1FCCB78400E4237C /* Build configuration list for PBXProject "ThreadChart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

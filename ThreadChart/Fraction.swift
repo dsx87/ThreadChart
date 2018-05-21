@@ -8,20 +8,29 @@
 
 import Foundation
 
-struct Fraction {
-    let numerator:Double
-    let denominator:Double
+struct Fraction: Equatable {
+    let numerator:Int
+    let denominator:Int
     let decimalValue:Double
-    let wholeValue:Double
-    init?(numerator:Double, denominator:Double, wholeValue:Double) {
-        self.numerator = numerator
-        self.denominator = denominator
-        self.wholeValue = wholeValue
+    let wholeValue:Int
+    let stringValue:String
+    init?(numerator:Int, denominator:Int, wholeValue:Int) {
         if denominator != 0{
-            decimalValue = wholeValue + (numerator / denominator)
+            decimalValue = Double(wholeValue) + (Double(numerator) / Double(denominator))
         }else{
             return nil
         }
         
+        self.numerator = numerator
+        self.denominator = denominator
+        self.wholeValue = wholeValue
+        
+        if numerator != 0, wholeValue == 0 {
+            self.stringValue = "\(numerator)/\(denominator)"
+        } else if numerator != 0, wholeValue != 0 {
+            self.stringValue = "\(wholeValue) \(numerator)/\(denominator)"
+        } else {
+            self.stringValue = "\(wholeValue)"
+        }
     }
 }

@@ -10,16 +10,15 @@ import UIKit
 
 class ThreadChartViewController: UIViewController {
     
-    @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var majorDiameterLabel: UILabel!
     @IBOutlet weak var pitchDiameterLabel: UILabel!
     @IBOutlet weak var minorDiameterLabel: UILabel!
     @IBOutlet weak var tapHoleLabel: UILabel!
     @IBOutlet weak var mmInchSwitch: UISegmentedControl!
+    @IBOutlet weak var inOutSwitch: UISegmentedControl!
+
     
-    var thread:ThreadProtocol!
-    var diameter:Double?
-    var pitch:Double?
+    var thread:ThreadProtocol?
     var isInternal:Bool!
     var units:Units!
     
@@ -28,6 +27,8 @@ class ThreadChartViewController: UIViewController {
         clearLabels()
         setUnitsValue()
         mmInchSwitch.addTarget(self, action: #selector(setUnitsValue), for: .valueChanged)
+        inOutSwitch.addTarget(self, action: #selector(getParametersAndCalculate), for: .valueChanged)
+
     }
     
     @objc func setUnitsValue() {
@@ -38,16 +39,11 @@ class ThreadChartViewController: UIViewController {
     
     @objc func getParametersAndCalculate(){}
     
-    func calculateThread(){
-        guard let diameter = self.diameter else { clearLabels(); return }
-        guard let pitch = self.pitch else { clearLabels(); return }
-        
-        if self is ISOViewController {
-            thread = ISOThread(diameter: diameter, pitch: pitch, isInternal: isInternal, inTolerance: .h, outTolerance: .g, units: units)
-        } else if self is UNViewController {
-            thread = UNThread(diameter: diameter, TPI: pitch, isInternal: isInternal, tolerance: .two, units: units)
-        }
+    
+    func showCalculationResults(){
 
+        guard let thread = thread else { clearLabels(); return }
+        
         let numberFormatter:NumberFormatter = thread.numberFormatter
         
         
@@ -72,8 +68,7 @@ class ThreadChartViewController: UIViewController {
         pitchDiameterLabel.text = "\(maxPitchString) \r \(minPitchString)"
         minorDiameterLabel.text = "\(maxMinorString) \r \(minMinorString)"
         
-        self.diameter = nil
-        self.pitch = nil
+
     }
     
     // MARK: Thread calculation methods
@@ -85,7 +80,7 @@ class ThreadChartViewController: UIViewController {
         tapHoleLabel.text = ""
         majorDiameterLabel.text = ""
         minorDiameterLabel.text = ""
-        pitchDiameterLabel.text = " \r \r Enter thread diameter and pitch (TPI)"
+        pitchDiameterLabel.text = " \r \r Choose thread parameters \r"
     }
     
 }

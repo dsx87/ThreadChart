@@ -27,12 +27,17 @@ protocol ISOThreadProtocol: ThreadProtocol {
     var inTolerance:ISOTolerances { get }
     var outTolerance:ISOTolerances { get }
     
-    init(diameter:Double, pitch:Double, isInternal:Bool, inTolerance:ISOTolerances, outTolerance:ISOTolerances, units:Units)
 }
 
 protocol UNThreadProtocol: ThreadProtocol {
     var tolerance:UNTolerances { get }
     
-    init(diameter:Double, TPI:Double, isInternal:Bool, tolerance:UNTolerances, units:Units)
+}
+
+protocol BSPPThreadProtocol: ThreadProtocol {
+    var designation:Fraction { get }
+    var TPI:Int { get }
+    
+    
 }
 

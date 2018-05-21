@@ -11,20 +11,18 @@ import UIKit
 class ISOViewController: ThreadChartViewController {
     @IBOutlet weak var diameterTextField: UITextField!
     @IBOutlet weak var pitchTextField: UITextField!
-    @IBOutlet weak var inOutSwitch: UISegmentedControl!
     
-    
+    var diameter:Double?
+    var pitch:Double?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        inOutSwitch.addTarget(self, action: #selector(getParametersAndCalculate), for: .valueChanged)
+        super.viewDidLoad()        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barTintColor = view.backgroundColor
+        navigationController?.navigationBar.barTintColor = (view as! ViewControllerView).setISOView()
     }
-    
     
     @objc override func getParametersAndCalculate() {
         isInternal = {
@@ -41,9 +39,18 @@ class ISOViewController: ThreadChartViewController {
             let pitch = pitchTextField.text?.doubleValue{
                 self.diameter = diameter
                 self.pitch = pitch
-        } else { clearLabels() }
+        } else {
+            clearLabels()
+        }
         
-        calculateThread()
+        guard let diameter = self.diameter else { clearLabels(); return }
+        guard let pitch = self.pitch else { clearLabels(); return }
+        
+        thread = ISOThread(diameter: diameter, pitch: pitch, isInternal: isInternal, inTolerance: .g, outTolerance: .h, units: units)
+        
+        showCalculationResults()
+        self.diameter = nil
+        self.pitch = nil
     }
     
     
