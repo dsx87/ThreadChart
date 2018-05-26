@@ -36,6 +36,8 @@ struct BSPPThread:ThreadProtocol {
         var inPitchDeviation:Double!
         var exPitchDeviation:Double!
         var minorDeviation:Double!
+        let pitch = 1 / Double(threadData.TPI)
+        var taphole:Double?
         
         if units == .mm{
             majorDiam = threadData.diameters.0
@@ -45,6 +47,7 @@ struct BSPPThread:ThreadProtocol {
             inPitchDeviation = threadData.inPitchDeviation
             exPitchDeviation = threadData.exPitchDeviation
             minorDeviation = threadData.minorDeviation
+            taphole = isInternal ? majorDiam - (pitch * 25.4) : nil
         } else if units == .inch {
             majorDiam = threadData.diameters.0 / 25.4
             pitchDiam = threadData.diameters.1 / 25.4
@@ -53,6 +56,7 @@ struct BSPPThread:ThreadProtocol {
             inPitchDeviation = threadData.inPitchDeviation / 25.4
             exPitchDeviation = threadData.exPitchDeviation / 25.4
             minorDeviation = threadData.minorDeviation / 25.4
+            taphole = isInternal ? majorDiam - pitch : nil
         }
         
         self.maxMajorDiameter = majorDiam
@@ -73,7 +77,7 @@ struct BSPPThread:ThreadProtocol {
         self.TPI = threadData.TPI
         self.units = units
         self.numberFormatter = getNumberFormatter(for: units)
-        self.taphole = nil
+        self.taphole = taphole
     }
 }
 

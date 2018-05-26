@@ -87,6 +87,7 @@ class UNViewController: ThreadChartViewController {
             pitch = view.TPI.text!.doubleValue
         }
         
+        
         if let view = activeView as? UNFractionInputView {
             var wholeValue:Double!
             if let whole = view.wholePart.text?.doubleValue{

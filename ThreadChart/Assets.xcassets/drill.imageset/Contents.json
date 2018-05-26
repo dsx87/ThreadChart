@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "drill.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "iOS_ThreadDrawing.png",
       "scale" : "2x"
     },
     {

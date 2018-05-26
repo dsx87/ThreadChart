@@ -68,10 +68,10 @@ class ThreadChartViewController: UIViewController {
         let minMinorString = numberFormatter.string(from: thread.minMinorDiameter as NSNumber)!
         
         if let tap = thread.taphole {
-            guard let tapString = numberFormatter.string(from: tap as NSNumber) else {tapHoleLabel.text = ""; return}
+            guard let tapString = numberFormatter.string(from: tap as NSNumber) else {tapHoleLabel.text = "Tap Hole"; return}
             tapHoleLabel.text = "Tap Hole: \(tapString)"
         }else{
-            tapHoleLabel.text = ""
+            tapHoleLabel.text = "Tap Hole"
         }
         
         
@@ -87,10 +87,10 @@ class ThreadChartViewController: UIViewController {
 
     //MARK: Helper methods
     func clearLabels(){
-        tapHoleLabel.text = ""
+        tapHoleLabel.text = "Tap Hole"
         majorDiameterLabel.text = ""
         minorDiameterLabel.text = ""
-        pitchDiameterLabel.text = " \r \r Choose thread parameters \r"
+        pitchDiameterLabel.text = " \r \r Choose thread parameters"
     }
     
 }

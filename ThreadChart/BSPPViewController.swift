@@ -22,6 +22,7 @@ class BSPPViewController: ThreadChartViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         classSwitcher.addTarget(self, action: #selector(getParametersAndCalculate), for: .valueChanged)
+        designation = threads[picker.selectedRow(inComponent: 0)].designation
         getParametersAndCalculate()
     }
 
