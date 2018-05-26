@@ -10,10 +10,12 @@ import UIKit
 
 class MenuViewController: UITableViewController {
     
+    //Secondary view controllers
     let ISOvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "ISO")
     let UNvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "UN")
     let BSPPvc = UIStoryboard(name: "NewInterface", bundle: nil).instantiateViewController(withIdentifier: "BSPP")
     
+    //threads description
     let threads = [["title":"ISO",
                     "description":"M/MF 60º"],
                    ["title":"UN",
@@ -23,7 +25,7 @@ class MenuViewController: UITableViewController {
                     ]
     
     
-    var cellColors = [UIColor]()
+    var cellColors = [UIColor]() //array of colors for text in cells
     
     
     override func viewDidLoad() {
@@ -72,6 +74,7 @@ class MenuViewController: UITableViewController {
         return cell
     }
     
+    //MARK: Table delegate methods
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let thread = threads[indexPath.row - 1]

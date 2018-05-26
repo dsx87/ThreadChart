@@ -14,7 +14,7 @@ struct Fraction: Equatable {
     let decimalValue:Double
     let wholeValue:Int
     let stringValue:String
-    init?(numerator:Int, denominator:Int, wholeValue:Int) {
+    init?(numerator:Int = 0, denominator:Int, wholeValue:Int) {
         if denominator != 0{
             decimalValue = Double(wholeValue) + (Double(numerator) / Double(denominator))
         }else{

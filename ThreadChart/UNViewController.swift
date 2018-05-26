@@ -18,10 +18,12 @@ class UNViewController: ThreadChartViewController {
     var diameter:Double?
     var pitch:Double?
     
+    //MARK: Lifecicle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         activeView = fractionView
         inputSwitch.addTarget(self, action: #selector(setUI), for: .valueChanged)
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +31,7 @@ class UNViewController: ThreadChartViewController {
         navigationController?.navigationBar.barTintColor = (view as! ViewControllerView).setUNView()
     }
     
+    //MARK: UI Methods
     @objc func setUI(){
         clearLabels()
         activeView?.resignFirstResponderFromSubviews()
@@ -55,7 +58,7 @@ class UNViewController: ThreadChartViewController {
         activeView?.setTextFieldsDelegate(to: self)
     }
     
-    
+    //MARK: Calculation methods
     @objc override func getParametersAndCalculate() {
         isInternal = {
             switch inOutSwitch.selectedSegmentIndex{
@@ -85,12 +88,18 @@ class UNViewController: ThreadChartViewController {
         }
         
         if let view = activeView as? UNFractionInputView {
-            guard let whole = view.wholePart.text?.doubleValue,
-                let num = view.nominator.text?.doubleValue,
+            var wholeValue:Double!
+            if let whole = view.wholePart.text?.doubleValue{
+                wholeValue = whole
+            }else{
+                wholeValue = 0
+            }
+            guard let num = view.nominator.text?.doubleValue,
                 let denom = view.denominator.text?.doubleValue,
                 let pitch = view.TPI.text?.doubleValue,
-                let diameter = Fraction(numerator: Int(num), denominator: Int(denom), wholeValue: Int(whole))?.decimalValue
+                let diameter = Fraction(numerator: Int(num), denominator: Int(denom), wholeValue: Int(wholeValue))?.decimalValue
                 else { clearLabels(); return }
+            
             self.diameter = diameter
             self.pitch = pitch
         }
@@ -104,7 +113,7 @@ class UNViewController: ThreadChartViewController {
         self.pitch = nil
     }
     
-    
+    //resigning first responder
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         activeView?.resignFirstResponderFromSubviews()
         getParametersAndCalculate()

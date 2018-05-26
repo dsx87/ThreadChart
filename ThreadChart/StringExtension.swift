@@ -10,6 +10,8 @@ import Foundation
 
 
 extension String {
+    
+    //decimal seperator workaround
     var doubleValue: Double? {
         let nf = NumberFormatter()
         nf.decimalSeparator = "."

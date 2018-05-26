@@ -77,6 +77,7 @@ struct BSPPThread:ThreadProtocol {
     }
 }
 
+//MARK: Thread data struct
 struct BSPPThreadData {
     var designation:Fraction
     var TPI:Int

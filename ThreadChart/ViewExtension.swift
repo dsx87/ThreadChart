@@ -10,6 +10,8 @@ import UIKit
 
 
 extension UIView {
+    
+    //view help methods
     func setTextFieldsDelegate(to vc:UIViewController) {
         for view in self.subviews {
             if let view = view as? UITextField  {

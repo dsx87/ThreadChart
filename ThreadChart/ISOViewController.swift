@@ -15,6 +15,7 @@ class ISOViewController: ThreadChartViewController {
     var diameter:Double?
     var pitch:Double?
     
+    //MARK: Lifecicle methods
     override func viewDidLoad() {
         super.viewDidLoad()        
     }
@@ -24,6 +25,7 @@ class ISOViewController: ThreadChartViewController {
         navigationController?.navigationBar.barTintColor = (view as! ViewControllerView).setISOView()
     }
     
+    // MARK: Calculate methods
     @objc override func getParametersAndCalculate() {
         isInternal = {
             switch inOutSwitch.selectedSegmentIndex{
@@ -53,7 +55,7 @@ class ISOViewController: ThreadChartViewController {
         self.pitch = nil
     }
     
-    
+    //first responder resigning
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         diameterTextField.resignFirstResponder()
         pitchTextField.resignFirstResponder()

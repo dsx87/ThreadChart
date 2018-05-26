@@ -16,12 +16,21 @@ class ThreadChartViewController: UIViewController {
     @IBOutlet weak var tapHoleLabel: UILabel!
     @IBOutlet weak var mmInchSwitch: UISegmentedControl!
     @IBOutlet weak var inOutSwitch: UISegmentedControl!
-
+    @IBOutlet weak var unitsLabel: UILabel!
+    
     
     var thread:ThreadProtocol?
     var isInternal:Bool!
-    var units:Units!
-    
+    var units:Units! {
+        didSet {
+            if units! == .inch {
+                unitsLabel.text = "ALL DIMENSIONS ARE IN INCHES"
+            }else {
+                unitsLabel.text = "ALL DIMENSIONS ARE IN MM"
+            }
+        }
+    }
+    //MARK: lifecicle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         clearLabels()
@@ -31,6 +40,7 @@ class ThreadChartViewController: UIViewController {
 
     }
     
+    //MARK: calculation Methods and stubs
     @objc func setUnitsValue() {
         if mmInchSwitch.selectedSegmentIndex == 0 { units = .mm }
         if mmInchSwitch.selectedSegmentIndex == 1 { units = .inch }
@@ -40,6 +50,7 @@ class ThreadChartViewController: UIViewController {
     @objc func getParametersAndCalculate(){}
     
     
+    //MARK: results output
     func showCalculationResults(){
 
         guard let thread = thread else { clearLabels(); return }
@@ -71,7 +82,6 @@ class ThreadChartViewController: UIViewController {
 
     }
     
-    // MARK: Thread calculation methods
     
     
 

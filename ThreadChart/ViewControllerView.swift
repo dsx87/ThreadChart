@@ -17,6 +17,8 @@ class ViewControllerView: UIView {
         self.backgroundColor = UIColor.clear
     }
     
+    //setting view specific appearance
+    
     func setISOView() -> UIColor {
         let startColor = UIColor(red: 1/255, green: 117/255, blue: 225/255, alpha: 1.0)
         let finishColor = UIColor(red: 2/255, green: 100/255, blue: 191/255, alpha: 1.0)

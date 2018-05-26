@@ -8,8 +8,9 @@
 
 import Foundation
 
-let cubeRoot:(Double) -> Double = {x in Double(pow(x, 1/3))}
+let cubeRoot:(Double) -> Double = {x in Double(pow(x, 1/3))} //Help function
 
+//common thread protocol
 protocol ThreadProtocol {
     var maxMajorDiameter:Double { get }
     var minMajorDiameter:Double { get }
@@ -23,6 +24,8 @@ protocol ThreadProtocol {
     var numberFormatter:NumberFormatter { get }
 }
 
+
+//thread specific protocols
 protocol ISOThreadProtocol: ThreadProtocol {
     var inTolerance:ISOTolerances { get }
     var outTolerance:ISOTolerances { get }
@@ -37,7 +40,5 @@ protocol UNThreadProtocol: ThreadProtocol {
 protocol BSPPThreadProtocol: ThreadProtocol {
     var designation:Fraction { get }
     var TPI:Int { get }
-    
-    
 }
 

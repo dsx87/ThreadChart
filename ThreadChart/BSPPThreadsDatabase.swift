@@ -10,6 +10,7 @@ import Foundation
 
 
 struct BSPPThreadsDatabase {
+    //BSPP threads are predefined, thus parameters needs to be added by hand
     var threads = [BSPPThreadData]()
     
     init() {

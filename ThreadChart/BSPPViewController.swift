@@ -18,6 +18,7 @@ class BSPPViewController: ThreadChartViewController {
     var designation:Fraction?
     var isClassA:Bool!
     
+    //MARK: Lifecicle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         classSwitcher.addTarget(self, action: #selector(getParametersAndCalculate), for: .valueChanged)
@@ -29,6 +30,7 @@ class BSPPViewController: ThreadChartViewController {
         navigationController?.navigationBar.barTintColor = (view as! ViewControllerView).setBSPPView()
     }
     
+    //MARK: Calculate Methods
     @objc override func getParametersAndCalculate(){
         isClassA = {
             if classSwitcher.selectedSegmentIndex == 0 { return true }
@@ -50,6 +52,7 @@ class BSPPViewController: ThreadChartViewController {
         showCalculationResults()
     }
     
+    //MARK: UI Methods
     func setUI() {
         if isInternal {
             classSwitcher.tintColor = UIColor.darkText
@@ -64,6 +67,7 @@ class BSPPViewController: ThreadChartViewController {
     
 }
 
+//MARK: Picker delegate and datasource methods
 extension BSPPViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -74,7 +78,7 @@ extension BSPPViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return threads[row].designation.stringValue
+        return "\(threads[row].designation.stringValue) - \(threads[row].TPI)"
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
