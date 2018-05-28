@@ -13,7 +13,7 @@ class ViewControllerView: UIView {
     let gradient = CAGradientLayer()
     
     override func awakeFromNib() {
-        gradient.frame = self.bounds
+        gradient.frame = UIScreen.main.bounds
         self.backgroundColor = UIColor.clear
     }
     

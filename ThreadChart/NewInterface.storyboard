@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vHJ-4D-6d4">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <navigationController id="Mkc-6o-4Zt" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NFu-na-Cqj">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -43,26 +43,26 @@
             <objects>
                 <tableViewController id="pkt-3p-gGm" customClass="MenuViewController" customModule="ThreadChart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="WgG-PS-YxW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" rowHeight="110" id="2Tn-li-d0x">
-                                <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="110"/>
+                                <rect key="frame" x="0.0" y="55.5" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Tn-li-d0x" id="4cN-9a-Dag">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="109.66666666666667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THREAD CHART" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-Eg-4FO">
-                                            <rect key="frame" x="123.66666666666669" y="8" width="167" height="33.666666666666664"/>
+                                            <rect key="frame" x="76.5" y="8" width="167" height="33.5"/>
                                             <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="26"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4b-cw-S1m">
-                                            <rect key="frame" x="102.33333333333333" y="56.666666666666657" width="209.33333333333337" height="45"/>
+                                            <rect key="frame" x="55.5" y="56.5" width="209.5" height="45"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
                                                     <string key="content">SCREW THREAD 
@@ -85,14 +85,14 @@ TOLERANCE CALULATOR</string>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="threadName" textLabel="DrT-hj-kAF" detailTextLabel="7b4-rJ-3Ab" style="IBUITableViewCellStyleValue1" id="ZIR-OF-uYa">
-                                <rect key="frame" x="0.0" y="165.33333333333334" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="165.5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZIR-OF-uYa" id="wKb-U8-X2z">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DrT-hj-kAF">
-                                            <rect key="frame" x="14.999999999999996" y="7.9999999999999982" width="42.666666666666664" height="28.333333333333332"/>
+                                            <rect key="frame" x="15" y="8" width="42.5" height="28.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Title">
@@ -106,7 +106,7 @@ TOLERANCE CALULATOR</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7b4-rJ-3Ab">
-                                            <rect key="frame" x="346" y="11.999999999999998" width="48" height="23.333333333333332"/>
+                                            <rect key="frame" x="256" y="12" width="48" height="23.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Detail">
@@ -143,47 +143,47 @@ TOLERANCE CALULATOR</string>
                         <viewControllerLayoutGuide type="bottom" id="ig2-vB-ZBb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b7e-4v-eLe" customClass="ViewControllerView" customModule="ThreadChart" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min  Major Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkV-3j-F5T">
-                                <rect key="frame" x="20" y="624.33333333333337" width="80.666666666666671" height="26.333333333333371"/>
+                                <rect key="frame" x="16" y="456" width="80.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min Pitch Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsS-kW-w6Q">
-                                <rect key="frame" x="168.33333333333334" y="624.33333333333337" width="77.666666666666657" height="26.333333333333371"/>
+                                <rect key="frame" x="121" y="456" width="78" height="26.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min Minor Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCi-5L-fFO">
-                                <rect key="frame" x="313" y="624.33333333333337" width="81" height="26.333333333333371"/>
+                                <rect key="frame" x="223" y="456" width="81" height="26.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhq-q0-zHf">
-                                <rect key="frame" x="188.33333333333334" y="655.66666666666663" width="37.333333333333343" height="18"/>
+                                <rect key="frame" x="141.5" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9d-XI-yTE">
-                                <rect key="frame" x="335.66666666666669" y="655.66666666666663" width="37.333333333333314" height="18"/>
+                                <rect key="frame" x="245.5" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2F-gx-rQg">
-                                <rect key="frame" x="42.333333333333329" y="655.66666666666663" width="37.333333333333329" height="18"/>
+                                <rect key="frame" x="38" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="tyo-26-YPY">
-                                <rect key="frame" x="34" y="58" width="40" height="25"/>
+                                <rect key="frame" x="30" y="58" width="40" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Adr-sq-rRR"/>
                                     <constraint firstAttribute="width" constant="40" id="JjI-bi-k7Z"/>
@@ -196,7 +196,7 @@ TOLERANCE CALULATOR</string>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.25" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaE-4L-gm6">
-                                <rect key="frame" x="86" y="58" width="40" height="25"/>
+                                <rect key="frame" x="82" y="58" width="40" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -205,19 +205,19 @@ TOLERANCE CALULATOR</string>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-pV-IJN">
-                                <rect key="frame" x="77" y="65" width="6" height="12"/>
+                                <rect key="frame" x="73" y="65" width="6" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Thread" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykd-RC-qq9">
-                                <rect key="frame" x="34" y="43" width="92" height="12"/>
+                                <rect key="frame" x="30" y="43" width="92" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="aRH-qf-Ba5">
-                                <rect key="frame" x="20" y="91" width="106" height="26"/>
+                                <rect key="frame" x="16" y="91" width="106" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="106" id="9Pz-v7-WOu"/>
                                 </constraints>
@@ -228,19 +228,19 @@ TOLERANCE CALULATOR</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL DIMENSIONS ARE IN MM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQc-PF-1Vm">
-                                <rect key="frame" x="123.66666666666669" y="710" width="167" height="16"/>
+                                <rect key="frame" x="76.5" y="542" width="167" height="16"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5u-Mh-j5V">
-                                <rect key="frame" x="20" y="63" width="11" height="15"/>
+                                <rect key="frame" x="16" y="63" width="11" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F0R-nW-foZ">
-                                <rect key="frame" x="297" y="568.33333333333337" width="100" height="29"/>
+                                <rect key="frame" x="203" y="400" width="100" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="fJZ-NV-flD"/>
                                 </constraints>
@@ -251,17 +251,17 @@ TOLERANCE CALULATOR</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" image="UN_ISOThread_Draw" translatesAutoresizingMaskIntoConstraints="NO" id="ip8-ia-Ykb">
-                                <rect key="frame" x="125" y="20" width="289" height="540.33333333333337"/>
+                                <rect key="frame" x="121" y="20" width="199" height="372"/>
                                 <color key="tintColor" red="0.0039215686274509803" green="0.45882352941176469" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drill" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-ag-JfA">
-                                <rect key="frame" x="43" y="414.33333333333331" width="60" height="145.99999999999994"/>
+                                <rect key="frame" x="39" y="246" width="60" height="146"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="BH1-qa-O2v"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Hole" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dt2-Jp-hT2">
-                                <rect key="frame" x="51.666666666666657" y="394.33333333333331" width="43" height="12"/>
+                                <rect key="frame" x="47.5" y="226" width="43" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -338,20 +338,20 @@ TOLERANCE CALULATOR</string>
                         <viewControllerLayoutGuide type="bottom" id="NCK-N1-dwf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G74-hB-Ji4" customClass="ViewControllerView" customModule="ThreadChart" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" image="BSPPThread_draw" translatesAutoresizingMaskIntoConstraints="NO" id="GvB-2i-3KU">
-                                <rect key="frame" x="125" y="38.999999999999972" width="310" height="509.33333333333326"/>
+                                <rect key="frame" x="125" y="39" width="216" height="341"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min  Major Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1z-f0-Eei">
-                                <rect key="frame" x="20" y="624.33333333333337" width="80.666666666666671" height="26.333333333333371"/>
+                                <rect key="frame" x="16" y="456" width="80.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min Pitch Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-Sn-N1n">
-                                <rect key="frame" x="168" y="624.33333333333337" width="78" height="26.333333333333371"/>
+                                <rect key="frame" x="121" y="456" width="78" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="xgz-yW-fgI"/>
                                 </constraints>
@@ -360,37 +360,37 @@ TOLERANCE CALULATOR</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min Minor Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGn-4g-pal">
-                                <rect key="frame" x="313" y="624.33333333333337" width="81" height="26.333333333333371"/>
+                                <rect key="frame" x="223" y="456" width="81" height="26.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTQ-Dw-prZ">
-                                <rect key="frame" x="188.33333333333334" y="655.66666666666663" width="37.333333333333343" height="18"/>
+                                <rect key="frame" x="141.5" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRK-XK-f3J">
-                                <rect key="frame" x="335.66666666666669" y="655.66666666666663" width="37.333333333333314" height="18"/>
+                                <rect key="frame" x="245.5" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paK-Sn-cDA">
-                                <rect key="frame" x="42.333333333333329" y="655.66666666666663" width="37.333333333333329" height="18"/>
+                                <rect key="frame" x="38" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Hole" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-cf-BkI">
-                                <rect key="frame" x="55.666666666666657" y="394.33333333333331" width="42.333333333333343" height="12"/>
+                                <rect key="frame" x="55.5" y="226" width="42.5" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL DIMENSIONS ARE IN INCHES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tg-2w-pFf">
-                                <rect key="frame" x="112" y="712.66666666666663" width="190" height="15.333333333333371"/>
+                                <rect key="frame" x="65" y="544.5" width="190" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -404,7 +404,7 @@ TOLERANCE CALULATOR</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bet-jv-QHA">
-                                <rect key="frame" x="298" y="568.33333333333337" width="100" height="29"/>
+                                <rect key="frame" x="204" y="400" width="100" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="0K6-Gw-kLb"/>
                                 </constraints>
@@ -426,7 +426,7 @@ TOLERANCE CALULATOR</string>
                                 </connections>
                             </pickerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-Nf-vNV">
-                                <rect key="frame" x="16" y="568.33333333333337" width="121" height="29"/>
+                                <rect key="frame" x="16" y="400" width="121" height="29"/>
                                 <segments>
                                     <segment title="Class A"/>
                                     <segment title="Class B"/>
@@ -434,13 +434,13 @@ TOLERANCE CALULATOR</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not applicable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbS-F9-tMc">
-                                <rect key="frame" x="21" y="571.33333333333337" width="111" height="21"/>
+                                <rect key="frame" x="21" y="403" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfa-54-jCl">
-                                <rect key="frame" x="46.666666666666657" y="414.33333333333331" width="60" height="145.99999999999994"/>
+                                <rect key="frame" x="46.5" y="246" width="60" height="146"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="I2M-Zv-whN"/>
                                 </constraints>
@@ -509,20 +509,20 @@ TOLERANCE CALULATOR</string>
                         <viewControllerLayoutGuide type="bottom" id="O9t-DV-zJR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CId-g0-jUA" customClass="ViewControllerView" customModule="ThreadChart" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6s-gN-lFq" userLabel="number view" customClass="UNNumberInputView" customModule="ThreadChart" customModuleProvider="target">
-                                <rect key="frame" x="20.666666666666671" y="45.666666666666657" width="107" height="39"/>
+                                <rect key="frame" x="20.5" y="45.5" width="107" height="39"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Thread" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewu-zO-xuc">
-                                        <rect key="frame" x="16.333333333333329" y="0.0" width="74" height="12"/>
+                                        <rect key="frame" x="16.5" y="0.0" width="74" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="—" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-Qy-Fi5">
-                                        <rect key="frame" x="52" y="16" width="17" height="20.666666666666671"/>
+                                        <rect key="frame" x="52" y="16" width="17" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -537,7 +537,7 @@ TOLERANCE CALULATOR</string>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bga-pA-bCX">
-                                        <rect key="frame" x="13.999999999999996" y="14" width="30.000000000000004" height="25"/>
+                                        <rect key="frame" x="14" y="14" width="30" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="5nA-ah-GO9"/>
                                             <constraint firstAttribute="height" constant="25" id="zk8-da-JjR"/>
@@ -574,13 +574,13 @@ TOLERANCE CALULATOR</string>
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min  Major Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emE-BT-6Oo">
-                                <rect key="frame" x="20" y="624.33333333333337" width="80.666666666666671" height="26.333333333333371"/>
+                                <rect key="frame" x="16" y="456" width="80.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min Pitch Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vb5-oP-qMw">
-                                <rect key="frame" x="168" y="624.33333333333337" width="78" height="26.333333333333371"/>
+                                <rect key="frame" x="121" y="456" width="78" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="7bA-Pf-JGv"/>
                                 </constraints>
@@ -589,37 +589,37 @@ TOLERANCE CALULATOR</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max/Min Minor Diameter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efw-uq-sLv">
-                                <rect key="frame" x="313" y="624.33333333333337" width="81" height="26.333333333333371"/>
+                                <rect key="frame" x="223" y="456" width="81" height="26.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbg-uv-ntq">
-                                <rect key="frame" x="188.33333333333334" y="655.66666666666663" width="37.333333333333343" height="18"/>
+                                <rect key="frame" x="141.5" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxw-mg-YOe">
-                                <rect key="frame" x="335.66666666666669" y="655.66666666666663" width="37.333333333333314" height="18"/>
+                                <rect key="frame" x="245.5" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKf-O5-UGE">
-                                <rect key="frame" x="42.333333333333329" y="655.66666666666663" width="37.333333333333329" height="18"/>
+                                <rect key="frame" x="38" y="487.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL DIMENSIONS ARE IN INCHES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-M6-eKl">
-                                <rect key="frame" x="112" y="712.66666666666663" width="190" height="15.333333333333371"/>
+                                <rect key="frame" x="65" y="544.5" width="190" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pWa-cM-Dh1">
-                                <rect key="frame" x="16" y="568.33333333333337" width="165" height="29"/>
+                                <rect key="frame" x="16" y="400" width="165" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="9cv-xJ-AqC"/>
                                 </constraints>
@@ -631,7 +631,7 @@ TOLERANCE CALULATOR</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thread input" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7V-cg-YZ3">
-                                <rect key="frame" x="62.666666666666657" y="545.33333333333337" width="72" height="15"/>
+                                <rect key="frame" x="62.5" y="377" width="72" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -645,7 +645,7 @@ TOLERANCE CALULATOR</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-0K-kZg">
-                                <rect key="frame" x="298" y="568.33333333333337" width="100" height="29"/>
+                                <rect key="frame" x="204" y="400" width="100" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="dJU-Qy-Nah"/>
                                 </constraints>
@@ -656,41 +656,41 @@ TOLERANCE CALULATOR</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" image="UN_ISOThread_Draw" translatesAutoresizingMaskIntoConstraints="NO" id="Jpf-rW-b6T">
-                                <rect key="frame" x="131" y="34.999999999999972" width="283" height="508.33333333333326"/>
+                                <rect key="frame" x="131" y="35" width="189" height="340"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drill" translatesAutoresizingMaskIntoConstraints="NO" id="ux4-wr-gk7">
-                                <rect key="frame" x="44" y="406.33333333333331" width="60" height="145.99999999999994"/>
+                                <rect key="frame" x="44" y="238" width="60" height="146"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="eR5-Lc-WzX"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Hole" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYT-uN-ZdP">
-                                <rect key="frame" x="53" y="386.33333333333331" width="42.666666666666657" height="12"/>
+                                <rect key="frame" x="53" y="218" width="42.5" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJR-TI-qFT" userLabel="decimal view" customClass="UNDecimalInputView" customModule="ThreadChart" customModuleProvider="target">
-                                <rect key="frame" x="27.666666666666671" y="45.666666666666657" width="93" height="39"/>
+                                <rect key="frame" x="17.5" y="45.5" width="113" height="39"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.25" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e26-2p-4J3">
-                                        <rect key="frame" x="0.0" y="14" width="30" height="25"/>
+                                        <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Mvw-64-2gh"/>
-                                            <constraint firstAttribute="width" constant="30" id="Q2j-eE-YNn"/>
+                                            <constraint firstAttribute="width" constant="40" id="Q2j-eE-YNn"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="—" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQg-VH-631">
-                                        <rect key="frame" x="38" y="16.333333333333336" width="17" height="20.666666666666664"/>
+                                        <rect key="frame" x="48" y="16.5" width="17" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="utC-0N-aWD">
-                                        <rect key="frame" x="63" y="14" width="30" height="25"/>
+                                        <rect key="frame" x="73" y="14" width="40" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="TdR-dl-Akg"/>
                                         </constraints>
@@ -699,7 +699,7 @@ TOLERANCE CALULATOR</string>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Thread" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDa-Ol-yv9">
-                                        <rect key="frame" x="9.3333333333333286" y="0.0" width="74" height="12"/>
+                                        <rect key="frame" x="19.5" y="0.0" width="74" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -749,7 +749,7 @@ TOLERANCE CALULATOR</string>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="—" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIr-sa-6Mq">
-                                        <rect key="frame" x="73" y="36" width="17" height="20.666666666666671"/>
+                                        <rect key="frame" x="73" y="36" width="17" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
